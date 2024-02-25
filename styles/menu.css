@@ -1,0 +1,38 @@
+.menu_zone {
+    padding: 10px; /* Поля вокруг текста */ 
+    background: #201f1e; /* Цвет фона */ 
+    border-radius: 30px 30px 30px 30px;
+    float: left;
+    width: 12%;
+    min-width: 120px;
+    margin: 0%;
+    align-items: center;
+    position: fixed;
+    text-align: center;
+}
+
+.icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #FF6347;
+    background: #FF7F50; /* Фоновый цвет и фоновый рисунок*/
+    margin: auto; /* Выравниваем по центру */
+}
+
+img.icon_img {
+    padding: 15%;
+    width: 70%;
+}
+
+button.menu_button {
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    min-width: 110px;
+    border: solid 1px rgb(237, 145, 145);
+    padding: 5px;
+    font-size: 12pt;
+    font-family:'Arial', sans-serif;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,68 @@
+body {
+    height: 100%;
+    background-size: cover;
+    background: #FFFFE0 url(../img/shop.jpg); /* Фоновый цвет и фоновый рисунок*/
+    background-attachment: fixed; /* Фон страницы фиксируется */
+    margin: 0%;
+  }
+
+.page { 
+  min-height: 100vh;
+  max-width: 100%;
+  opacity: 0.8;
+  background-color: #2f2e2d;
+  margin: auto; /* Выравниваем по центру */
+  }
+
+h1 {
+  color: #eae8e8; /* Цвет заголовка */
+  text-align: center;
+  padding-top: 1%;
+  font-stretch: condensed;
+  font-size: 16pt; /* Размер шрифта в пунктах */
+  font-family:'Arial', sans-serif; /* Семейство шрифтов */
+  font-weight: 700; /* Нормальное начертание текста  */
+  }
+
+h3 {
+  text-align: center;
+  color: #eae8e8;  /* Цвет заголовка */
+  font-size: 14pt; /* Размер шрифта в пунктах */
+  font-family:'Arial', sans-serif; /* Семейство шрифтов */
+  font-weight: normal; /* Нормальное начертание текста  */
+  }
+
+p {
+  margin-left: 20px; /* Отступ слева в пикселах */
+  margin-right: 20px; /* Отступ справа в пикселах */
+  font-family:'Arial', sans-serif;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  font-size: 12pt;
+  }
+
+a {
+    text-align: center; /* Выравнивание по ширине */
+    font-family:'Arial', sans-serif;
+    font-size: 12pt;
+    color: #eae8e8; 
+  }
+   
+.footer {
+    min-width: 270px;
+    width: 316pt; 
+    height: 50px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;  
+    top: 90%;
+    left: 0;
+    right: 0;
+    position: fixed; /* Фиксированное положение */
+    margin: auto; /* Выравниваем по центру */
+    color: #eae8e8;  
+    text-align: center;
+  }
+
+
