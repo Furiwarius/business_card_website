@@ -1,0 +1,84 @@
+.form_zone {
+    background: #434242; /* Цвет фона */ 
+    border-radius: 15px;
+    padding: 15px;
+    align-items: center;
+    @media (width>800px) {
+        min-width: 800px;
+        font-size: 11pt;
+    };
+    @media (width<800px) {
+        max-width: 100%;
+        min-width: 300px;
+        font-size: 9pt;
+    };
+}
+
+.form_name_number{
+    display: flex;
+    width: 80%;
+    margin: 10px;
+}
+
+.form {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+textarea {
+    background: #7c7676; /* Цвет фона */ 
+    font-family:'Arial', sans-serif;
+    padding: 10px;
+    width: 95%;
+    height: 150px;
+    max-width: 95%;
+    max-height: 150px;
+    min-width: 400px;
+    border-radius: 15px;
+    border: 0;
+    margin: 10px;
+}
+
+input {
+    font-family:'Arial', sans-serif;
+    background: #7c7676; /* Цвет фона */ 
+    border-radius: 10px;
+    height: 15px;
+    padding: 6px;
+    border: 0;
+}
+
+label{
+    font-family:'Arial', sans-serif;
+    padding-right: 5px;
+}
+
+input.submit{
+    color: #ffffff; /* Цвет текста */
+    background: inherit; /* Цвет фона */ 
+    font-family:'Arial', sans-serif;
+    font-size: 11pt;
+    margin: auto;
+    padding-top: 0;
+    width: 120px;
+    height: 20px;
+    cursor: pointer;
+}
+
+h3.form_title{
+    margin: 10px;
+}
+
+.submit_button {
+    background: #7c7676; /* Цвет фона */
+    border-radius: 20px;
+    margin: 10px;
+    display: inline-block;
+    padding: 12px;
+}
+
+p.form_title {
+    display: inline-block;
+}
+

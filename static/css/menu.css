@@ -1,0 +1,128 @@
+.menu_zone {
+    background: #1a1919; /* Цвет фона */ 
+    border-radius: 0px 0px 15px 15px;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    @media (width>800px) {
+        min-width: 800px;
+        max-width: 60%;
+        align-items: center;
+        justify-content: space-around;
+    };
+    @media (width<800px) {
+        max-width: 100%;
+        min-width: 300px;
+    };
+}
+
+.icon {
+    background: #292828;
+    border-radius: 15px 15px 15px 15px;
+    align-items: center;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h3.title {
+    text-align: center;
+    color: #ffffff; /* Цвет заголовка */
+    font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
+    font-weight: normal; /* Нормальное начертание текста  */
+    margin-top: 10px;
+    margin-bottom: 0;
+    @media (width>800px) {
+        font-size: 20pt; /* Размер шрифта в пунктах */
+    };
+    @media (width<800px) {
+        font-size: 16pt; /* Размер шрифта в пунктах */
+    };
+    }
+
+h4 {
+    text-align: center;
+    color: #ffffff; /* Цвет заголовка */
+    font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
+    font-weight: normal; /* Нормальное начертание текста  */
+    @media (width>800px) {
+        font-size: 8pt; /* Размер шрифта в пунктах */
+    };
+    @media (width<800px) {
+        font-size: 7pt; /* Размер шрифта в пунктах */
+    };
+    }    
+
+.menu_list {
+    background: #292828;
+    border-radius: 15px 15px 15px 15px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    width: 95%;
+    min-width: 350px;
+}
+
+a.menu_link {
+    font-family:'Arial', sans-serif;
+    text-decoration: none;
+    @media (width>800px) {
+        font-size: 12pt; /* Размер шрифта в пунктах */
+    };
+    @media (width<800px) {
+        font-size: 10pt; /* Размер шрифта в пунктах */
+    };
+
+}
+    a.menu_link:visited {
+        color: #ffffff; /* Цвет посещённой ссылки */
+    } 
+    a.menu_link:hover {
+        color: #6b6868; /* Цвет ссылки при наведении */ 
+        text-decoration: underline; /* Добавляем подчёркивание */
+    }
+
+.number_zone {
+    background: #292828;
+    border-radius: 15px 15px 15px 15px;
+    align-items: center;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+p.explanations {
+    text-align: left;
+    color: #ffffff; /* Цвет заголовка */
+    font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
+    font-weight: normal; /* Нормальное начертание текста  */
+
+    padding: 0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    @media (width>800px) {
+        font-size: 9pt; /* Размер шрифта в пунктах */
+    };
+    @media (width<800px) {
+        font-size: 7pt; /* Размер шрифта в пунктах */
+    };
+}
+
+a.menu_href_copy {
+    color: #ffffff; /* Цвет текста */
+    font-family:'Arial', sans-serif;
+    cursor: pointer;
+    font-size: 9pt; /* Размер шрифта в пунктах */
+    }
+    a.href_copy:visited {
+        color: #ffffff; /* Цвет посещённой ссылки */
+    } 
+    a.href_copy:hover {
+        color: #6b6868; /* Цвет ссылки при наведении */ 
+        text-decoration: underline; /* Добавляем подчёркивание */
+    }
+    

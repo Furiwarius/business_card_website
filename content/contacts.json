@@ -1,0 +1,12 @@
+{
+    "page_name": "Контакты",
+    "content": ["Номер для звонков:",
+                {"phone_number":"8 905 855 13 56"},
+                "Номер для месседжеров:",
+                {"phone_number":"8 905 855 13 56"},
+                "E-mail:",
+                {"email":"metalist@yandex.ru"},
+                "Адрес:",
+                "г. Калининград, ул. Ялтинская, 66",
+                {"download":"content\\Requisites.txt"}]
+}

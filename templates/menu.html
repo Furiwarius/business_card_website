@@ -1,0 +1,27 @@
+
+{% block menu %}
+    <div class="menu_zone">
+        <div class="icon">
+            <!-- Поле для размещения названия фирмы или логотипа --> 
+            <h3 class="title">«Спецработы»</h3>
+            <h4>логотип</h4>
+        </div>
+        <div class="menu_list">
+            <!-- Поле для размещения ссылок на другие страницы сайта --> 
+            <div><a class="menu_link" href="/">Главная</a></div>
+            <div><a class="menu_link" href="/about_company">О компании</a></div>
+            <div><a class="menu_link" href="/services">Услуги</a></div>
+            <div><a class="menu_link" href="/vacancies">Вакансии</a></div>
+            <div><a class="menu_link" href="/contacts">Контакты</a></div>
+        </div>
+        <div class="number_zone">
+        <!-- Поле для размещения почты и номера --> 
+        <script src="static\js\copy.js"></script>
+        <p class="explanations">Наш номер</p>
+        <a id="number" onclick="Copy('number')" class="menu_href_copy">8 905 855 13 56</a>
+        <p class="explanations">Наша почта</p>
+        <a id="email" onclick="Copy('email')" class="menu_href_copy">metalist@yandex.ru</a>
+        </div>
+    </div>
+
+{% endblock %}

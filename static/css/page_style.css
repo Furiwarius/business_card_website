@@ -1,0 +1,123 @@
+body {
+    height: 100%;
+    background-size: cover;
+    background-color: #222120;
+    background: #FFFFE0 url(../img/welder_black.jpg); /* Фоновый цвет и фоновый рисунок*/
+    background-attachment: fixed; /* Фон страницы фиксируется */
+    margin: 0%;
+  }
+
+.page { 
+  min-height: 100vh;
+  max-width: 100%;
+  opacity: 0.8;
+  background-color: #222120;
+  margin: 0 auto; /* Выравниваем по центру */
+  padding: 0;
+}
+
+.content {
+  color: #ffffff; /* Цвет текста */
+  font-family:'Arial', sans-serif;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  padding: 10px; /* Поля вокруг текста */ 
+  margin-left: 5px; /* Отступ слева в пикселах */
+  margin-right: 5px; /* Отступ справа в пикселах */
+  margin: 0 auto;
+  @media (width>800px) {
+    max-width: 60%;
+    min-width: 800px;
+  };
+  @media (width<800px) {
+    max-width: 95%;
+    min-width: 300px;
+  };
+}
+
+p.number {
+  color: #ffffff; /* Цвет текста */
+  font-family:'Arial', sans-serif;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  font-size: 11pt;
+  border-bottom: 2px solid #f0d7d7;
+  }
+
+p {
+    color: #ffffff; /* Цвет текста */
+    font-family:'Arial', sans-serif;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    @media (width>800px) {
+      font-size: 11pt;
+    };
+    @media (width<800px) {
+      font-size: 9pt;
+    }
+  }
+
+a {
+  color: #ffffff; /* Цвет текста */
+  font-family:'Arial', sans-serif;
+  @media (width>800px) {
+    font-size: 11pt;
+  };
+  @media (width<800px) {
+    font-size: 9pt;
+  }
+}
+
+a.href_copy {
+  color: #ffffff; /* Цвет текста */
+  margin-left: 5px; /* Отступ слева в пикселах */
+  margin-right: 5px; /* Отступ справа в пикселах */
+  font-family:'Arial', sans-serif;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  cursor: pointer;
+  @media (width>800px) {
+    font-size: 11pt;
+  };
+  @media (width<800px) {
+    font-size: 9pt;
+  }
+  }
+  a.href_copy:visited {
+      color: #ffffff; /* Цвет посещённой ссылки */
+  } 
+  a.href_copy:hover {
+      color: #6b6868; /* Цвет ссылки при наведении */ 
+      text-decoration: underline; /* Добавляем подчёркивание */
+  }
+
+a[download]::after {
+  content: url(/example/image/download.png); /* Выводим картинку */
+  vertical-align: sub; /* Выравнивание по вертикали */
+  padding-left: 5px; /* Расстояние от текста до картинки */
+}
+
+
+
+
+.footer {
+  background: #1a1919; /* Цвет фона */ 
+  border-radius: 10px 10px 10px 10px;
+  width: 250px; 
+  height: 30px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;  
+  top: 93%;
+  left: 0;
+  right: 0;
+  position: fixed; /* Фиксированное положение */
+  margin: auto; /* Выравниваем по центру */
+  color: #ffffff; 
+  text-align: center;
+}
+
