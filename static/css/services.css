@@ -1,0 +1,35 @@
+.services{
+    padding: 10px;
+    margin: 0px;
+}
+
+.services_zone {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+}
+
+.services_elem{
+    background: #5b5a5a; /* Цвет фона */ 
+    width: 400px;
+    border-radius: 15px;
+    padding: 0;
+    text-align: left;
+    margin: 10px;
+}
+
+.services_elem_head{
+    background: #444343; /* Цвет фона */ 
+    margin: auto;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 15px, 15px, 0px, 0px;
+    text-align: left;
+}
+
+.services_elem_body{
+    font-size: 12pt;
+    text-align: left;
+}

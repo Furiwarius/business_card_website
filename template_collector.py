@@ -34,8 +34,8 @@ def page_collector(data:dict) -> None:
         results.write(template.render(context))
         print(f"... wrote {results_filename}")
 
-# Сборка контента из файла
-def content_collector(path:str) -> dict:
+# Сборка контента из файла в html
+def content_collector_to_html(path:str) -> dict:
     '''
     Формирование контента
 
@@ -69,6 +69,24 @@ def content_collector(path:str) -> dict:
                     result_dict['content']+=f"<p>{line}</p>"
 
     return result_dict
+
+
+# Сборка контента из файла в словарь
+def content_collector_to_dict(path:str) -> dict:
+    '''
+    Формирование контента
+
+    Создает из текстового файла формата json словарь, 
+    который можно будет вставить в шаблон 
+    Принимает путь к файлу из которого будет сформирован контент для вставки
+    '''
+    
+    # Открываем файл и достаем оттуда данные о названии страницы и ее содержимом
+    with open(path, encoding="utf-8") as f:
+        file_content = f.read()
+        templates = json.loads(file_content)
+        
+    return templates
 
 
 # Сборка списков

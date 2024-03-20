@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="../static/css/menu.css">
 		<link rel="stylesheet" href="../static/css/form.css">
 		<link rel="stylesheet" href="../static/css/button_up.css">
+		<link rel="stylesheet" href="../static/css/services.css">
 		<link rel="icon" href="static\img\icon_welder.png" type="image/x-icon">
     </head>
     <body>
@@ -18,7 +19,11 @@
 			<div class="content">
 				<!-- Поле для размещения контента сайта -->
 				{{ content|safe }}
-				
+
+				{% block services %}
+					{% include "services.html" %}
+				{% endblock %}
+
 				<!-- Поле для размещения контента сайта -->
 				{% if page_name=='Контакты' %}
 					{% block form %}

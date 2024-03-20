@@ -1,0 +1,25 @@
+{% block services %}
+    <div class="services">
+        <h2>Наши услуги</h2>
+        <div class="services_zone">
+
+            {% for number,service in enumerate(service_content.service_list, 1) %}
+                {% if number%3==0 %}
+                </div><div class="services_zone">
+                {% endif %}
+                <div class="services_elem">
+                    <div class="services_elem_head">
+                        <h3>{{ service.service_name }}</h3>
+                    </div>
+                    <div class="services_elem_body">
+                        <ul>
+                            {% for item in service.list %}
+                                <li> {{ item }} </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+       </div>
+    </div>
+{% endblock %}
