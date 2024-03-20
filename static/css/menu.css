@@ -16,14 +16,18 @@
     };
 }
 
-.icon {
+
+
+.menu_block {
     background: #292828;
     border-radius: 15px 15px 15px 15px;
-    align-items: center;
+    margin: auto;
+    height: 50px;
     margin: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+    flex-grow: 1;
 }
+
 
 h3.title {
     text-align: center;
@@ -45,6 +49,7 @@ h4 {
     color: #ffffff; /* Цвет заголовка */
     font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
     font-weight: normal; /* Нормальное начертание текста  */
+    margin: 0;
     @media (width>800px) {
         font-size: 8pt; /* Размер шрифта в пунктах */
     };
@@ -53,46 +58,18 @@ h4 {
     };
     }    
 
-.menu_list {
-    background: #292828;
-    border-radius: 15px 15px 15px 15px;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 80px;
-    width: 95%;
-    min-width: 350px;
-}
-
-a.menu_link {
-    font-family:'Arial', sans-serif;
-    text-decoration: none;
-    @media (width>800px) {
-        font-size: 12pt; /* Размер шрифта в пунктах */
-    };
-    @media (width<800px) {
-        font-size: 10pt; /* Размер шрифта в пунктах */
-    };
-
-}
-    a.menu_link:visited {
-        color: #ffffff; /* Цвет посещённой ссылки */
-    } 
-    a.menu_link:hover {
-        color: #6b6868; /* Цвет ссылки при наведении */ 
-        text-decoration: underline; /* Добавляем подчёркивание */
-    }
 
 .number_zone {
     background: #292828;
     border-radius: 15px 15px 15px 15px;
     align-items: center;
     margin: 5px;
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    flex-grow: 1;
 }
 
 p.explanations {

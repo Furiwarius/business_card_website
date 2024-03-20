@@ -1,10 +1,7 @@
 from flask import Flask, render_template, request
-from template_collector import content_collector_to_html, content_collector_to_dict
 from wtforms import Form, StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Optional, NumberRange
-
-
-app = Flask(__name__)
+import json
 
 class ContactForm(Form):
     username = StringField(label="Имя: ", validators=[DataRequired()])
@@ -12,51 +9,43 @@ class ContactForm(Form):
     message = TextAreaField("massage", validators=[Optional()])
     submit = SubmitField("Оставить заявку")
 
+
+def content_collector_to_dict(path:str) -> dict:
+    '''
+    Формирование контента
+
+    Создает из текстового файла формата json словарь, 
+    который можно будет вставить в шаблон 
+    Принимает путь к файлу из которого будет сформирован контент для вставки
+    '''
+    
+    # Открываем файл и достаем оттуда данные о названии страницы и ее содержимом
+    with open(path, encoding="utf-8") as f:
+        file_content = f.read()
+        templates = json.loads(file_content)
+        
+    return templates
+
+
+app = Flask(__name__)
 form = ContactForm()
 
 
 # Главная страница
 @app.route('/')
 def home_page():
-  page = content_collector_to_html('content/home.json')
+  page = content_collector_to_dict('content/home.json')
   services_content = content_collector_to_dict('content/services.json')
+  contacts = content_collector_to_dict('content/contacts.json')
+  vacancies = content_collector_to_dict('content/contacts.json')
   
   return render_template('sample.html', 
-                         page_name=page["page_name"], 
-                         content=page['content'], 
-                         service_content=services_content)
+                         page=page, 
+                         service_content=services_content,
+                         contacts=contacts,
+                         vacancies=vacancies)
 
-
-# О компании
-@app.route('/about_company')
-def about_company_page():
-  page = content_collector_to_html('content/about_company.json')
-  
-  return render_template('sample.html', page_name=page["page_name"], content=page['content'])
-
-
-# Услуги
-@app.route('/services')
-def services_page():
-  page = content_collector_to_html('content/services_content.json')
-  
-  return render_template('sample.html', page_name=page["page_name"], content=page['content'])
-
-# Вакансии
-@app.route('/vacancies')
-def vacancies_page():
-  page = content_collector_to_html('content/vacancies.json')
-
-  return render_template('sample.html', page_name=page["page_name"], content=page['content'])
-
-# Контакты
-@app.route('/contacts')
-def contacts_page():
-  page = content_collector_to_html('content/contacts.json')
-
-  return render_template('sample.html', page_name=page["page_name"], content=page['content'], form=form)
-
-
+'''
 # Обработка данных формы
 @app.route('/form', methods=['post', 'get'])
 def bid():
@@ -71,30 +60,30 @@ def bid():
   else:
     page = content_collector_to_html('content/contacts.json')
     return render_template('sample.html', page_name=page["page_name"], content=page['content'])
-
+'''
 
 # Обработка ошибки 404 - страница не найдена
 @app.errorhandler(404)
 def page_not_found(e):
-    page = content_collector_to_html('content/page_not_found.json')
+    page = content_collector_to_dict('content/page_not_found.json')
     
-    return render_template('sample.html', page_name=page["page_name"], content=page['content']), 404
+    return render_template('sample.html', page=page), 404
 
 
 # Обработка ошибки 500 - ошибка сервера
 @app.errorhandler(500)
 def server_error(e):
-    page = content_collector_to_html('content/server_error.json')
+    page = content_collector_to_dict('content/server_error.json')
     
-    return render_template('sample.html', page_name=page["page_name"], content=page['content']), 500
+    return render_template('sample.html', page=page), 500
 
 
 # Обработка ошибки 410 - страница удалена
 @app.errorhandler(410)
 def page_not_found(e):
-    page = content_collector_to_html('content/page_deleted.json')
+    page = content_collector_to_dict('content/page_deleted.json')
     
-    return render_template('sample.html', page_name=page["page_name"], content=page['content']), 410
+    return render_template('sample.html', page=page), 410
 
 
 if __name__ == '__main__':

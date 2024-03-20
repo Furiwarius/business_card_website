@@ -1,0 +1,10 @@
+{% block about_company %}
+
+    <div class="block">
+        <h2>Трудостройство</h2>
+        {% for item in vacancies.content %}
+            <p>{{ item }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
