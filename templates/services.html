@@ -4,7 +4,7 @@
         <div class="services_zone">
 
             {% for service in service_content.service_list %}
-                <div class="services_elem">
+                <a class="services_elem"  href="{{ service.href }}">
                     <div class="services_elem_head">
                         <h3>{{ service.service_name }}</h3>
                     </div>
@@ -15,7 +15,7 @@
                             {% endfor %}
                         </ul>
                     </div>
-                </div>
+                </a>
                 {% if (loop.index)%3==0 %}
                     </div><div class="services_zone">
                 {% endif %}

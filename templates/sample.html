@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../static/css/button_up.css">
 		<link rel="stylesheet" href="../static/css/services.css">
 		<link rel="icon" href="static\img\icon_welder.png" type="image/x-icon">
+		<script src="static\js\btn_up.js"></script>
     </head>
     <body>
 		<div class="page">
@@ -18,20 +19,9 @@
 			{% endblock %}
 
 			<div class="content">
-				{% block about_company %}
-				{% include "about_company.html" %}
-				{% endblock %}
-			
-				{% block services %}
-				{% include "services.html" %}
-				{% endblock %}
-
-				{% block vacancies %}
-				{% include "vacancies.html" %}
+				{% block content %} <!-- вложенные шаблоны -->
 				{% endblock %}
 			</div>
-
-			<script src="static\js\btn_up.js"></script>
 			<button onclick="topFunction()" id="myBtn" title="Наверх">Вверх</button>
 		</div>
     </body>

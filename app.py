@@ -39,11 +39,22 @@ def home_page():
   contacts = content_collector_to_dict('content/contacts.json')
   vacancies = content_collector_to_dict('content/vacancies.json')
   
-  return render_template('sample.html', 
+  return render_template('home.html', 
                          page=page, 
                          service_content=services_content,
                          contacts=contacts,
                          vacancies=vacancies)
+
+
+# Страница с информацией о вакансиях
+@app.route('/<path:service_path>')
+def service(service_path:str):
+  content = content_collector_to_dict(f"{service_path}.json")
+  page = content_collector_to_dict('content/home.json')
+  contacts = content_collector_to_dict('content/contacts.json')
+  
+  return render_template('vacancies_info.html', page=page, contacts=contacts, content=content)
+
 
 '''
 # Обработка данных формы

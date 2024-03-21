@@ -8,13 +8,15 @@
     };
 }
 
-.services_elem{
+a.services_elem{
     background: #5b5a5a; /* Цвет фона */ 
     min-height: 170px;
     border-radius: 15px;
     padding: 0px;
     text-align: left;
     margin: 5px;
+    cursor: pointer;
+    display: block;
     @media (width>800px) {
         width: 400px;
     };
@@ -26,9 +28,10 @@
     };
 }
 
+
 .services_elem_head{
     background: #444343; /* Цвет фона */ 
-    font-size: 14pt;
+    font-size: 12pt;
     padding-bottom: 2px;
     padding-top: 2px;
     padding-right: 7px;
@@ -45,7 +48,7 @@
 }
 
 .services_elem_body{
-    font-size: 12pt;
+    font-size: 11pt;
     text-align: left;
     white-space: nowrap;
     padding-left: 7px;
