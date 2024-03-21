@@ -10,24 +10,37 @@ body {
 .page { 
   min-height: 100vh;
   max-width: 100%;
-  opacity: 0.8;
-  background-color: #222120;
+  opacity: 0.85;
+  background-color: #2e2d2c;
   margin: 0 auto; /* Выравниваем по центру */
   padding: 0;
 }
 
+.page_background { 
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #282828;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
 .block {
   margin: 10px;
-  padding: 10px;
+  padding: 0px;
 }
 
 .content {
+  background-color: #282828;
   color: #ffffff; /* Цвет текста */
-  font-family:'Arial', sans-serif;
-  padding: 10px; /* Поля вокруг текста */ 
+  font-family:'Verdana', sans-serif; 
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 200px;
   margin-left: 5px; /* Отступ слева в пикселах */
   margin-right: 5px; /* Отступ справа в пикселах */
-  margin: 0 auto;
+  margin: auto;
   @media (width>800px) {
     max-width: 60%;
     min-width: 800px;
@@ -40,7 +53,7 @@ body {
 
 p.number {
   color: #ffffff; /* Цвет текста */
-  font-family:'Arial', sans-serif;
+  font-family:'Verdana', sans-serif;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px; 
@@ -50,24 +63,31 @@ p.number {
 
 p {
     color: #ffffff; /* Цвет текста */
-    font-family:'Arial', sans-serif;
-    padding-bottom: 5px;
+    font-family:'Verdana', sans-serif;
+    padding: 0;
+    text-indent: 20px;
     @media (width>800px) {
-      font-size: 11pt;
+      font-size: 13pt;
     };
     @media (width<800px) {
-      font-size: 9pt;
+      font-size: 11pt;
     }
   }
 
+h2 {
+  padding-left: 15px;
+  font-size: 20pt;
+}
+
 a {
   color: #ffffff; /* Цвет текста */
-  font-family:'Arial', sans-serif;
+  font-family:'Verdana', sans-serif;
+  text-decoration: none;
   @media (width>800px) {
-    font-size: 11pt;
+    font-size: 13pt;
   };
   @media (width<800px) {
-    font-size: 9pt;
+    font-size: 11pt;
   }
 }
 
@@ -75,7 +95,7 @@ a.href_copy {
   color: #ffffff; /* Цвет текста */
   margin-left: 5px; /* Отступ слева в пикселах */
   margin-right: 5px; /* Отступ справа в пикселах */
-  font-family:'Arial', sans-serif;
+  font-family:'Verdana', sans-serif;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px; 
@@ -101,23 +121,12 @@ a[download]::after {
   padding-left: 5px; /* Расстояние от текста до картинки */
 }
 
-
-
-
-.footer {
-  background: #1a1919; /* Цвет фона */ 
-  border-radius: 10px 10px 10px 10px;
-  width: 250px; 
-  height: 30px;
-  padding-bottom: 25px;
-  padding-left: 10px;
-  padding-right: 10px;  
-  top: 93%;
-  left: 0;
-  right: 0;
-  position: fixed; /* Фиксированное положение */
-  margin: auto; /* Выравниваем по центру */
-  color: #ffffff; 
+.href_button {
+  background: #5b5a5a; /* Цвет фона */ 
+  margin: auto;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 35px;
+  max-width: 170px;
   text-align: center;
 }
-

@@ -37,7 +37,7 @@ def home_page():
   page = content_collector_to_dict('content/home.json')
   services_content = content_collector_to_dict('content/services.json')
   contacts = content_collector_to_dict('content/contacts.json')
-  vacancies = content_collector_to_dict('content/contacts.json')
+  vacancies = content_collector_to_dict('content/vacancies.json')
   
   return render_template('sample.html', 
                          page=page, 

@@ -1,7 +1,7 @@
 
 {% block menu %}
     <div class="menu_zone">
-        <div class="menu_block">
+        <div class="menu_block_title">
             <!-- Поле для размещения названия фирмы или логотипа --> 
             <h3 class="title">«Спецработы»</h3>
             <h4>логотип</h4>
@@ -9,25 +9,28 @@
 
         <div class="menu_block">
             <!-- Поле для размещения кнопки для заявки -->
-            <p>Оставить заявку</p>
+            <div class="menu_button">
+                <a>Оставить заявку</a>
+            </div>
         </div>
 
         <div class="menu_block">
             <!-- Поле для размещения адреса -->
             <p class="explanations">Адрес</p>
-            <p>{{ contacts.address }}</p>
+            <p class="address">{{ contacts.address }}</p>
         </div>
-
-        <div class="number_zone">
-            <!-- Поле для размещения почты и номера --> 
-            <script src="static\js\copy.js"></script>
-            <div>
-                <p class="explanations">Наш номер</p>
-                <a id="number" onclick="Copy('number')" class="menu_href_copy">{{ contacts.number }}</a>
-            </div>
-            <div>
-                <p class="explanations">Наша почта</p>
-                <a id="email" onclick="Copy('email')" class="menu_href_copy">{{ contacts.email }}</a>
+        <div class="menu_block">
+            <div class="number_zone">
+                <!-- Поле для размещения почты и номера --> 
+                <script src="static\js\copy.js"></script>
+                <div class="number_block">
+                    <p class="explanations">Наш номер</p>
+                    <a id="number" onclick="Copy('number')" class="menu_href_copy">{{ contacts.number }}</a>
+                </div>
+                <div class="number_block">
+                    <p class="explanations">Наша почта</p>
+                    <a id="email" onclick="Copy('email')" class="menu_href_copy">{{ contacts.email }}</a>
+                </div>
             </div>
         </div>
     </div>

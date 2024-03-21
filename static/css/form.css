@@ -41,7 +41,7 @@ textarea {
 }
 
 input {
-    font-family:'Arial', sans-serif;
+    font-family:'Verdana', sans-serif;
     background: #7c7676; /* Цвет фона */ 
     border-radius: 10px;
     height: 15px;
@@ -50,14 +50,14 @@ input {
 }
 
 label{
-    font-family:'Arial', sans-serif;
+    font-family:'Verdana', sans-serif;
     padding-right: 5px;
 }
 
 input.submit{
     color: #ffffff; /* Цвет текста */
     background: inherit; /* Цвет фона */ 
-    font-family:'Arial', sans-serif;
+    font-family:'Verdana', sans-serif;
     font-size: 11pt;
     margin: auto;
     padding-top: 0;

@@ -1,5 +1,5 @@
 .menu_zone {
-    background: #1a1919; /* Цвет фона */ 
+    background: #444343; /* Цвет фона */ 
     border-radius: 0px 0px 15px 15px;
     padding: 0;
     margin: auto;
@@ -16,18 +16,33 @@
     };
 }
 
-
-
 .menu_block {
-    background: #292828;
+    background: #5b5a5a;
+    border-radius: 15px 15px 15px 15px;
+    margin: auto;
+    margin: 5px;
+    padding: 10px;
+    flex-grow: 1;
+    @media (width>600px) {
+        height: 50px;
+    };
+    @media (width<600px) {
+        height: 70px;
+    };
+}
+
+.menu_block_title {
+    background: #5b5a5a;
     border-radius: 15px 15px 15px 15px;
     margin: auto;
     height: 50px;
     margin: 5px;
     padding: 10px;
     flex-grow: 1;
+    @media (width<800px) {
+        display: none;
+    };
 }
-
 
 h3.title {
     text-align: center;
@@ -37,47 +52,44 @@ h3.title {
     margin-top: 10px;
     margin-bottom: 0;
     @media (width>800px) {
-        font-size: 20pt; /* Размер шрифта в пунктах */
+        font-size: 18pt; /* Размер шрифта в пунктах */
     };
     @media (width<800px) {
-        font-size: 16pt; /* Размер шрифта в пунктах */
+        font-size: 15pt; /* Размер шрифта в пунктах */
     };
     }
 
 h4 {
     text-align: center;
     color: #ffffff; /* Цвет заголовка */
-    font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
+    font-family:'Verdana', sans-serif; /* Семейство шрифтов */
     font-weight: normal; /* Нормальное начертание текста  */
     margin: 0;
     @media (width>800px) {
-        font-size: 8pt; /* Размер шрифта в пунктах */
+        font-size: 7pt; /* Размер шрифта в пунктах */
     };
     @media (width<800px) {
-        font-size: 7pt; /* Размер шрифта в пунктах */
+        font-size: 6pt; /* Размер шрифта в пунктах */
     };
     }    
 
-
 .number_zone {
-    background: #292828;
-    border-radius: 15px 15px 15px 15px;
-    align-items: center;
-    margin: 5px;
-    display: flex;
-    padding-left: 10px;
+    @media (width>600px) {
+        display: flex;
+    };
+}
+
+.number_block {
     padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
     flex-grow: 1;
 }
 
 p.explanations {
     text-align: left;
     color: #ffffff; /* Цвет заголовка */
-    font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
+    font-family:'Verdana', sans-serif; /* Семейство шрифтов */
     font-weight: normal; /* Нормальное начертание текста  */
-
+    text-indent: 0px;
     padding: 0;
     margin-top: 1px;
     margin-bottom: 1px;
@@ -91,9 +103,11 @@ p.explanations {
 
 a.menu_href_copy {
     color: #ffffff; /* Цвет текста */
-    font-family:'Arial', sans-serif;
+    font-family:'Verdana', sans-serif;
     cursor: pointer;
-    font-size: 9pt; /* Размер шрифта в пунктах */
+    text-align: center;
+    font-size: 11pt; /* Размер шрифта в пунктах */
+    white-space: nowrap;
     }
     a.href_copy:visited {
         color: #ffffff; /* Цвет посещённой ссылки */
@@ -102,4 +116,16 @@ a.menu_href_copy {
         color: #6b6868; /* Цвет ссылки при наведении */ 
         text-decoration: underline; /* Добавляем подчёркивание */
     }
+
+p.address {
+    text-indent: 0px;
+    font-size: 11pt;
+    margin: 0;
+    min-width: 150px;
+}
+
+.menu_button {
+    cursor: pointer;
+    text-align: center;
+}
     
