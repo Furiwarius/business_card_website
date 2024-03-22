@@ -1,16 +1,21 @@
 {% extends "sample.html" %}
 {% block content %}
-
-	{% block about_company %}
-	{% include "about_company.html" %}
-	{% endblock %}
-				
+	<div class="block">
+		<h2>О нас</h2>
+		{% for item in page.content %}
+			<p>{{ item }}</p>
+		{% endfor %}
+	</div>
+			
 	{% block services %}
 	{% include "services.html" %}
 	{% endblock %}
 
-	{% block vacancies %}
-	{% include "vacancies.html" %}
-	{% endblock %}
-
+	<div class="block">
+        <h2>Трудостройство</h2>
+        {% for item in vacancies.content %}
+            <p>{{ item }}</p>
+        {% endfor %}
+        <a class="href_button" href="/vacancies_info">Смотреть вакансии</a>
+    </div>
 {% endblock %}

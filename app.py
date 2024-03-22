@@ -51,7 +51,7 @@ def vacancies_page():
   contacts = content_collector_to_dict('content/contacts.json')
   vacancies_info = content_collector_to_dict('content/vacancies_info.json')
   
-  return render_template('vacancies_info.html', 
+  return render_template('detailed_page.html', 
                          page=vacancies_info,
                          contacts=contacts)
 
@@ -62,7 +62,7 @@ def service_page(service_path:str):
   page = content_collector_to_dict(f"content/{service_path}.json")
   contacts = content_collector_to_dict('content/contacts.json')
   
-  return render_template('services_info.html', page=page, contacts=contacts)
+  return render_template('detailed_page.html', page=page, contacts=contacts)
 
 
 '''

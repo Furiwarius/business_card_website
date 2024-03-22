@@ -71,6 +71,20 @@ p {
     }
   }
 
+
+li {
+  color: #ffffff; /* Цвет текста */
+  font-family:'Verdana', sans-serif;
+  padding: 2px;
+  @media (width>800px) {
+    font-size: 11pt;
+  };
+  @media (width<800px) {
+    font-size: 10pt;
+  }
+}
+
+
 h2 {
   padding-left: 15px;
   font-size: 16pt;
