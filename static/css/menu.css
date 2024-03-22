@@ -4,15 +4,10 @@
     padding: 0;
     margin: auto;
     display: flex;
+    width: auto;
     @media (width>800px) {
-        min-width: 800px;
-        max-width: 60%;
         align-items: center;
         justify-content: space-around;
-    };
-    @media (width<800px) {
-        max-width: 100%;
-        min-width: 300px;
     };
 }
 

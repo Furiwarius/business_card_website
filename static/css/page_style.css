@@ -16,12 +16,19 @@ body {
   padding: 0;
 }
 
-.page_background { 
-  min-height: 100vh;
-  max-width: 100%;
+.page_framing { 
   background-color: #282828;
-  margin: 0 auto;
-  padding: 0;
+  margin: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  @media (width>800px) {
+    max-width: 60%;
+    min-width: 800px;
+  };
+  @media (width<800px) {
+    max-width: 95%;
+    min-width: 300px;
+  };
 }
 
 
@@ -34,21 +41,12 @@ body {
   background-color: #282828;
   color: #ffffff; /* Цвет текста */
   font-family:'Verdana', sans-serif; 
-  padding-right: 10px;
-  padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 200px;
   margin-left: 5px; /* Отступ слева в пикселах */
   margin-right: 5px; /* Отступ справа в пикселах */
   margin: auto;
-  @media (width>800px) {
-    max-width: 60%;
-    min-width: 800px;
-  };
-  @media (width<800px) {
-    max-width: 95%;
-    min-width: 300px;
-  };
+  width: auto;
 }
 
 p.number {
