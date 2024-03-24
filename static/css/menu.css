@@ -46,11 +46,11 @@ h3.title {
     font-weight: normal; /* Нормальное начертание текста  */
     margin-top: 10px;
     margin-bottom: 0;
-    @media (width>800px) {
-        font-size: 18pt; /* Размер шрифта в пунктах */
+    @media (width>1000px) {
+        font-size: 16pt; /* Размер шрифта в пунктах */
     };
-    @media (width<800px) {
-        font-size: 15pt; /* Размер шрифта в пунктах */
+    @media (width<1000px) {
+        font-size: 12pt; /* Размер шрифта в пунктах */
     };
     }
 
@@ -101,26 +101,43 @@ a.menu_href_copy {
     font-family:'Verdana', sans-serif;
     cursor: pointer;
     text-align: center;
-    font-size: 11pt; /* Размер шрифта в пунктах */
     white-space: nowrap;
-    }
-    a.href_copy:visited {
-        color: #ffffff; /* Цвет посещённой ссылки */
-    } 
-    a.href_copy:hover {
-        color: #6b6868; /* Цвет ссылки при наведении */ 
-        text-decoration: underline; /* Добавляем подчёркивание */
-    }
-
-p.address {
-    text-indent: 0px;
-    font-size: 11pt;
-    margin: 0;
-    min-width: 150px;
+    @media (width>800px) {
+        font-size: 11pt;
+    };
+    @media (width<800px) {
+        font-size: 9pt;
+    };
 }
 
-.menu_button {
+
+a.href_button {
+    background: #5b5a5a; /* Цвет фона */ 
+    margin: auto;
+    padding: 7px;
     cursor: pointer;
+    border-radius: 35px;
+    max-width: 170px;
     text-align: center;
+    display: block;
+    @media (width>800px) {
+        font-size: 11pt;
+    };
+    @media (width<800px) {
+        font-size: 9pt;
+    };
+  }
+
+
+a.address {
+    text-indent: 0px;
+    margin: 0;
+    min-width: 140px;
+    @media (width>800px) {
+        font-size: 11pt;
+        white-space: nowrap;
+    };
+    @media (width<800px) {
+        font-size: 9pt;
+    };
 }
-    
