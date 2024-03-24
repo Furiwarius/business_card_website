@@ -43,9 +43,10 @@ def home_page():
                          page=page, 
                          service_content=services_content,
                          contacts=contacts,
-                         vacancies=vacancies)
+                         vacancies=vacancies,
+                         form=form)
 
-# Главная страница
+# Страница с информацией о вакансиях
 @app.route('/vacancies_info')
 def vacancies_page():
   contacts = content_collector_to_dict('content/contacts.json')
@@ -53,16 +54,17 @@ def vacancies_page():
   
   return render_template('detailed_page.html', 
                          page=vacancies_info,
-                         contacts=contacts)
+                         contacts=contacts,
+                         form=form)
 
 
-# Страница с информацией о вакансиях
+# Страница с информацией об услугах
 @app.route('/<path:service_path>')
 def service_page(service_path:str):
   page = content_collector_to_dict(f"content/{service_path}.json")
   contacts = content_collector_to_dict('content/contacts.json')
   
-  return render_template('detailed_page.html', page=page, contacts=contacts)
+  return render_template('detailed_page.html', page=page, contacts=contacts, form=form)
 
 
 '''

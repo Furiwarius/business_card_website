@@ -112,6 +112,11 @@ a {
   }
 }
 
+a.address {
+  font-family:'Verdana', sans-serif;
+}
+
+
 a.href_copy {
   color: #ffffff; /* Цвет текста */
   margin-left: 5px; /* Отступ слева в пикселах */
