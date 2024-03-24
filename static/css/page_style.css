@@ -75,7 +75,7 @@ p {
 li {
   color: #ffffff; /* Цвет текста */
   font-family:'Verdana', sans-serif;
-  padding: 2px;
+  padding: 4px;
   @media (width>800px) {
     font-size: 11pt;
   };
