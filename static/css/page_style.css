@@ -33,9 +33,19 @@ body {
 
 
 .block {
-  margin: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 0px;
 }
+
+
+.maps_zone {
+  place-items: center;
+}
+
+
 
 .content {
   background-color: #282828;
@@ -141,4 +151,19 @@ a.href_button {
   max-width: 170px;
   text-align: center;
   display: block;
+}
+
+iframe {
+  margin: auto;
+  border-radius: 15px;
+  border: 0;
+  display: grid;
+  @media (width>800px) {
+    width: 700px;
+    height : 450px;
+  };
+  @media (width<800px) {
+    width: 500px;
+    height : 300px;
+  };
 }
