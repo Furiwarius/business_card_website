@@ -10,7 +10,7 @@ class ContactForm(Form):
     submit = SubmitField("Оставить заявку")
 
 
-def content_collector_to_dict(path:str) -> dict:
+def content_collector_to_dict(**paths) -> dict:
     '''
     Формирование контента
 
@@ -20,11 +20,13 @@ def content_collector_to_dict(path:str) -> dict:
     '''
     
     # Открываем файл и достаем оттуда данные о названии страницы и ее содержимом
-    with open(path, encoding="utf-8") as f:
+    result = {}
+    for name_file, path in paths.items():
+      with open(f"content/{path}.json", encoding="utf-8") as f:
         file_content = f.read()
-        templates = json.loads(file_content)
-        
-    return templates
+        result[name_file] = json.loads(file_content)
+
+    return result
 
 
 app = Flask(__name__)
@@ -34,78 +36,64 @@ form = ContactForm()
 # Главная страница
 @app.route('/')
 def home_page():
-  page = content_collector_to_dict('content/home.json')
-  services_content = content_collector_to_dict('content/services.json')
-  contacts = content_collector_to_dict('content/contacts.json')
-  vacancies = content_collector_to_dict('content/vacancies.json')
-  
-  return render_template('home.html', 
-                         page=page, 
-                         service_content=services_content,
-                         contacts=contacts,
-                         vacancies=vacancies,
-                         form=form)
+  filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
+
+  return render_template('home.html', filling=filling, form=form)
+
 
 # Страница с информацией о вакансиях
 @app.route('/vacancies_info')
 def vacancies_page():
-  contacts = content_collector_to_dict('content/contacts.json')
-  vacancies_info = content_collector_to_dict('content/vacancies_info.json')
+  filling = content_collector_to_dict(page='vacancies_info', contacts='contacts')
   
-  return render_template('detailed_page.html', 
-                         page=vacancies_info,
-                         contacts=contacts,
-                         form=form)
+  return render_template('detailed_page.html', filling=filling, form=form)
 
 
 # Страница с информацией об услугах
 @app.route('/<path:service_path>')
 def service_page(service_path:str):
-  page = content_collector_to_dict(f"content/{service_path}.json")
-  contacts = content_collector_to_dict('content/contacts.json')
+  filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
   
-  return render_template('detailed_page.html', page=page, contacts=contacts, form=form)
+  return render_template('detailed_page.html', filling=filling, form=form)
 
 
-'''
+
 # Обработка данных формы
 @app.route('/form', methods=['post', 'get'])
 def bid():
-  message = ''
   if request.method == 'POST':
     name = request.form.get('name')  # запрос к данным формы
     number = request.form.get('number')
     number = request.form.get('number')
-
-    page = content_collector_to_html('content/submitted_bid.json')
-    return render_template('sample.html', page_name=page["page_name"], content=page['content'])
+    filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
+    return render_template('home.html', filling=filling, form=form)
   else:
-    page = content_collector_to_html('content/contacts.json')
-    return render_template('sample.html', page_name=page["page_name"], content=page['content'])
-'''
+    filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
+    return render_template('home.html', filling=filling, form=form)
+
 
 # Обработка ошибки 404 - страница не найдена
 @app.errorhandler(404)
 def page_not_found(e):
-    page = content_collector_to_dict('content/page_not_found.json')
+    filling = content_collector_to_dict(page='page_not_found', contacts='contacts')
     
-    return render_template('sample.html', page=page), 404
+    return render_template('sample.html', filling=filling), 404
 
 
 # Обработка ошибки 500 - ошибка сервера
 @app.errorhandler(500)
 def server_error(e):
-    page = content_collector_to_dict('content/server_error.json')
+    filling = content_collector_to_dict(page='server_error', contacts='contacts')
     
-    return render_template('sample.html', page=page), 500
+    return render_template('sample.html', filling=filling), 500
 
 
 # Обработка ошибки 410 - страница удалена
 @app.errorhandler(410)
 def page_not_found(e):
-    page = content_collector_to_dict('content/page_deleted.json')
+    filling = content_collector_to_dict(page='page_deleted', contacts='contacts')
     
-    return render_template('sample.html', page=page), 410
+    return render_template('sample.html', filling=filling), 410
 
 
 if __name__ == '__main__':

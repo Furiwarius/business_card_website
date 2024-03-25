@@ -2,7 +2,7 @@
     <div class="block">
         <h2>Наши услуги</h2>
         <div class="services_zone">
-            {% for service in service_content.service_list %}
+            {% for service in filling.services_content.service_list %}
                 <a class="services_elem"  href="{{ service.href }}">
                     <div class="services_elem_head">
                         <h3>{{ service.service_name }}</h3>

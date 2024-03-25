@@ -19,7 +19,7 @@
         <div class="menu_block">
             <!-- Поле для размещения адреса -->
             <p class="explanations">Адрес</p>
-            <a class="address" href="#maps">{{ contacts.address }}</a>
+            <a class="address" href="#maps">{{ filling.contacts.address }}</a>
         </div>
         <div class="menu_block">
             <div class="number_zone">
@@ -27,11 +27,11 @@
                 <script src="static\js\copy.js"></script>
                 <div class="number_block">
                     <p class="explanations">Наш номер</p>
-                    <a id="number" onclick="Copy('number')" class="menu_href_copy">{{ contacts.number }}</a>
+                    <a id="number" onclick="Copy('number')" class="menu_href_copy">{{ filling.contacts.number }}</a>
                 </div>
                 <div class="number_block">
                     <p class="explanations">Наша почта</p>
-                    <a id="email" onclick="Copy('email')" class="menu_href_copy">{{ contacts.email }}</a>
+                    <a id="email" onclick="Copy('email')" class="menu_href_copy">{{ filling.contacts.email }}</a>
                 </div>
             </div>
         </div>
