@@ -4,10 +4,10 @@
     top: 93%; /* Place the button at the bottom of the page */
     right: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
+    border: 0.5px solid #000;
     outline: none; /* Remove outline */
-    background-color: rgb(89, 85, 85); /* Set a background color */
-    color: white; /* Text color */
+    background-color: rgb(71, 69, 69); /* Set a background color */
+    color: rgb(255, 255, 255); /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 30px; /* Rounded corners */

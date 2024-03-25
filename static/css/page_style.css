@@ -72,7 +72,6 @@ p {
     color: #ffffff; /* Цвет текста */
     font-family:'Verdana', sans-serif;
     padding: 0;
-    text-indent: 20px;
     @media (width>800px) {
       font-size: 11pt;
     };
@@ -159,5 +158,33 @@ iframe {
   @media (width<800px) {
     width: 500px;
     height : 300px;
+  };
+}
+
+footer {
+  background: #201f1f; /* Цвет фона */ 
+  border-radius: 15px 15px 0px 0px;
+  border: 0.5px solid #000;
+  bottom: 0;
+  padding: 10px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  @media (width>800px) {
+    justify-content: space-around;
+  };
+}
+
+.footer_number_block{
+  @media (width<800px) {
+    display: none;
+  };
+}
+
+.footer_block {
+  margin-left: 10px;
+  margin-right: 10px;
+  @media (width>800px) {
+    text-align: center;
   };
 }
