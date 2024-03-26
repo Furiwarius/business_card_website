@@ -42,6 +42,7 @@ body {
 
 
 .maps_zone {
+  margin-top: 40px;
   place-items: center;
 }
 

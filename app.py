@@ -32,6 +32,7 @@ def content_collector_to_dict(**paths) -> dict:
 app = Flask(__name__)
 form = ContactForm()
 
+
 # Главная страница
 @app.route('/')
 def home_page():
@@ -90,7 +91,6 @@ def page_not_found(e):
     filling = content_collector_to_dict(page='page_deleted', contacts='contacts')
     
     return render_template('sample.html', filling=filling), 410
-
 
 if __name__ == '__main__':
   # debug true задаем специально для разработки 
