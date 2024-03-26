@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
-from wtforms import Form, StringField, SubmitField, TextAreaField
+from wtforms import Form, StringField, SubmitField, TextAreaField, IntegerField
 from wtforms.validators import DataRequired, Optional, NumberRange
 import json
 
 class ContactForm(Form):
     username = StringField(label="Имя: ", validators=[DataRequired()])
-    phonenumber = StringField(label="Ваш номер: ", validators=[NumberRange(max=11, min=11), DataRequired()])
+    phonenumber = IntegerField(label="Ваш номер: ", validators=[DataRequired(), NumberRange(11)])
     message = TextAreaField("massage", validators=[Optional()])
     submit = SubmitField("Оставить заявку")
 
@@ -32,7 +32,6 @@ def content_collector_to_dict(**paths) -> dict:
 app = Flask(__name__)
 form = ContactForm()
 
-
 # Главная страница
 @app.route('/')
 def home_page():
@@ -45,7 +44,7 @@ def home_page():
 @app.route('/vacancies_info')
 def vacancies_page():
   filling = content_collector_to_dict(page='vacancies_info', contacts='contacts')
-  
+
   return render_template('detailed_page.html', filling=filling, form=form)
 
 
@@ -53,7 +52,7 @@ def vacancies_page():
 @app.route('/<path:service_path>')
 def service_page(service_path:str):
   filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
-  
+
   return render_template('detailed_page.html', filling=filling, form=form)
 
 
@@ -61,15 +60,12 @@ def service_page(service_path:str):
 # Обработка данных формы
 @app.route('/form', methods=['post', 'get'])
 def bid():
-  if request.method == 'POST':
-    name = request.form.get('name')  # запрос к данным формы
-    number = request.form.get('number')
-    number = request.form.get('number')
-    filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
-    return render_template('home.html', filling=filling, form=form)
-  else:
-    filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
-    return render_template('home.html', filling=filling, form=form)
+  form = ContactForm(request.form)
+  if request.method == 'POST' and form.validate():
+    print(True)
+    # ДОРАБОТАТЬ СПОСОБ ХРАНЕНИЯ ДАННЫХ
+  filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
+  return render_template('home.html', filling=filling, form=form)
 
 
 # Обработка ошибки 404 - страница не найдена
