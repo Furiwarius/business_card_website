@@ -1,6 +1,7 @@
 import os
 import smtplib
 from configparser import ConfigParser
+import jinja2
 
 
 def send_bid(massage:str) -> None:
@@ -24,11 +25,9 @@ def send_bid(massage:str) -> None:
         user = config.get("personal data", "email")
         passwd = config.get("personal data", "passwd")
         to = config.get("personal data", "email")
+        subject = config.get("setting letter", "subject")
     else:
         return False
-
-    # тема письма
-    subject = "Новая заявка"
 
     # формируем тело письма
     body = "\r\n".join((f"From: {user}", f"To: {to}", 
@@ -48,3 +47,28 @@ def send_bid(massage:str) -> None:
         raise err
     finally:
         smtp.quit()
+
+
+def render_letter(**values) -> str:
+    '''
+    Сборка письма по данным формы
+    '''
+
+    filename = "letter_sample_with_massage.txt"
+    username = values["username"]
+    number = values["number"]
+    massage = values["massage"]
+
+    if values["massage"]==None:
+        filename="letter_sample_only_name_and_number.txt"
+
+    with open(f"templates\{filename}", 'r', encoding='utf-8') as template_file:
+        template_file_content = template_file.read()
+    environment = jinja2.Environment()
+    template = environment.from_string(template_file_content)
+    letter = template.render(username=username,
+                             number=number,
+                             massage=massage)
+    
+    return letter
+
