@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from wtforms import Form, StringField, SubmitField, TextAreaField, IntegerField
 from wtforms.validators import DataRequired, Optional, NumberRange
 import json
+import os
 import sending_notifications
 
 class ContactForm(Form):
@@ -53,9 +54,12 @@ def vacancies_page():
 # Страница с информацией об услугах
 @app.route('/<path:service_path>')
 def service_page(service_path:str):
-  filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
+  if os.path.exists(F'content/{service_path}.json')==False:
+     return page_not_found(e=404)
+  else:
+    filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
 
-  return render_template('detailed_page.html', filling=filling, form=form)
+    return render_template('detailed_page.html', filling=filling, form=form)
 
 
 
@@ -77,7 +81,7 @@ def bid():
 def page_not_found(e):
     filling = content_collector_to_dict(page='page_not_found', contacts='contacts')
     
-    return render_template('sample.html', filling=filling), 404
+    return render_template('detailed_page.html', filling=filling, form=form), 404
 
 
 # Обработка ошибки 500 - ошибка сервера
@@ -86,14 +90,6 @@ def server_error(e):
     filling = content_collector_to_dict(page='server_error', contacts='contacts')
     
     return render_template('sample.html', filling=filling), 500
-
-
-# Обработка ошибки 410 - страница удалена
-@app.errorhandler(410)
-def page_not_found(e):
-    filling = content_collector_to_dict(page='page_deleted', contacts='contacts')
-    
-    return render_template('sample.html', filling=filling), 410
 
 if __name__ == '__main__':
   # debug true задаем специально для разработки 
