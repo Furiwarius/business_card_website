@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from wtforms import Form, StringField, SubmitField, TextAreaField, IntegerField
 from wtforms.validators import DataRequired, Optional, NumberRange
 import json
+import sending_notifications
 
 class ContactForm(Form):
     username = StringField(label="Имя: ", validators=[DataRequired()])
@@ -62,9 +63,11 @@ def service_page(service_path:str):
 @app.route('/form', methods=['post', 'get'])
 def bid():
   form = ContactForm(request.form)
-  if request.method == 'POST' and form.validate():
-    print(True)
-    # ДОРАБОТАТЬ СПОСОБ ХРАНЕНИЯ ДАННЫХ
+  if request.method == 'POST' and form.validate():    
+    sending_notifications.sending_notifications(username = form.username.data,
+                                                number = form.phonenumber.data,
+                                                message = form.message.data)
+
   filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
   return render_template('home.html', filling=filling, form=form)
 
