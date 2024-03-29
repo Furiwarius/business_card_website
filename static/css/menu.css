@@ -1,25 +1,21 @@
 .menu_zone {
-    background: #201f1f; /* Цвет фона */ 
-    border-radius: 0px 0px 15px 15px;
-    border: 0.5px solid #000;
+    background: inherit;
+    border-bottom: 0.5px solid #D0C6C6;
     padding: 0;
     margin: auto;
     display: flex;
     width: auto;
     @media (width>800px) {
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     };
 }
 
-.menu_block {
-    background: #3e3d3d;
-    border: 0.5px solid #000;
-    border-radius: 15px 15px 15px 15px;
-    margin: auto;
-    margin: 5px;
+.title_block {
+    background: inherit;
+    margin: 15px;
     padding: 10px;
-    flex-grow: 1;
+    display: block;
     @media (width>600px) {
         height: 50px;
     };
@@ -28,119 +24,43 @@
     };
 }
 
-.menu_block_title {
-    background: #3e3d3d;
-    border: 0.5px solid #000;
-    border-radius: 15px 15px 15px 15px;
-    margin: auto;
-    height: 50px;
-    margin: 5px;
+.menu_block {
+    background: inherit;
+    margin: 15px;
     padding: 10px;
-    flex-grow: 1;
-    @media (width<800px) {
+    display: block;
+    @media (width<1150px) {
         display: none;
     };
 }
 
+.round_menu {
+    display: none;
+    @media (width<1150px) {
+        display: block;
+    };
+}
+
+
 h3.title {
     text-align: center;
-    color: #ffffff; /* Цвет заголовка */
-    font-family:'FreeMono', sans-serif; /* Семейство шрифтов */
-    font-weight: normal; /* Нормальное начертание текста  */
-    margin-top: 10px;
-    margin-bottom: 0;
+    color: #000000; /* Цвет заголовка */
+    font-family:'Verdana', sans-serif; /* Семейство шрифтов */
+    font-weight: bold;
+    margin: auto;
     @media (width>1000px) {
-        font-size: 16pt; /* Размер шрифта в пунктах */
+        font-size: 35pt; /* Размер шрифта в пунктах */
     };
     @media (width<1000px) {
-        font-size: 12pt; /* Размер шрифта в пунктах */
+        font-size: 25pt; /* Размер шрифта в пунктах */
     };
     }
 
-h4 {
-    text-align: center;
-    color: #ffffff; /* Цвет заголовка */
+a.menu_href {
+    color: #605C5C;
     font-family:'Verdana', sans-serif; /* Семейство шрифтов */
-    font-weight: normal; /* Нормальное начертание текста  */
-    margin: 0;
-    @media (width>800px) {
-        font-size: 7pt; /* Размер шрифта в пунктах */
-    };
-    @media (width<800px) {
-        font-size: 6pt; /* Размер шрифта в пунктах */
-    };
-    }    
-
-.number_zone {
-    @media (width>600px) {
-        display: flex;
-    };
+    margin-left: 10px;
 }
-
-.number_block {
-    padding-right: 10px;
-    flex-grow: 1;
-}
-
-p.explanations {
-    text-align: left;
-    color: #ffffff; /* Цвет заголовка */
-    font-family:'Verdana', sans-serif; /* Семейство шрифтов */
-    font-weight: normal; /* Нормальное начертание текста  */
-    text-indent: 0px;
-    padding: 0;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    @media (width>800px) {
-        font-size: 9pt; /* Размер шрифта в пунктах */
-    };
-    @media (width<800px) {
-        font-size: 7pt; /* Размер шрифта в пунктах */
-    };
-}
-
-a.menu_href_copy {
-    color: #ffffff; /* Цвет текста */
-    font-family:'Verdana', sans-serif;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-    @media (width>800px) {
-        font-size: 11pt;
-    };
-    @media (width<800px) {
-        font-size: 9pt;
-    };
-}
-
-
-a.href_button {
-    background: #3e3d3d;
-    margin: auto;
-    padding: 7px;
-    cursor: pointer;
-    border-radius: 35px;
-    max-width: 170px;
-    text-align: center;
-    display: block;
-    @media (width>800px) {
-        font-size: 11pt;
-    };
-    @media (width<800px) {
-        font-size: 9pt;
-    };
-  }
-
-
-a.address {
-    text-indent: 0px;
-    margin: 0;
-    min-width: 140px;
-    @media (width>800px) {
-        font-size: 11pt;
-        white-space: nowrap;
-    };
-    @media (width<800px) {
-        font-size: 9pt;
-    };
+a.menu_href:hover{
+    color: #FE143E;
 }

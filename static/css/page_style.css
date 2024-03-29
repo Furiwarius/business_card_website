@@ -1,34 +1,17 @@
 body {
     height: 100%;
     background-size: cover;
-    background-color: #222120;
-    background: #FFFFE0 url(../img/welder_black.jpg); /* Фоновый цвет и фоновый рисунок*/
+    background-color: #eef2f2;
     background-attachment: fixed; /* Фон страницы фиксируется */
     margin: 0%;
   }
 
 .page { 
   min-height: 100vh;
-  max-width: 100%;
+  max-width: 80%;
   opacity: 0.85;
-  background-color: #2e2d2c;
   margin: 0 auto; /* Выравниваем по центру */
   padding: 0;
-}
-
-.page_framing { 
-  background-color: #282828;
-  margin: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  @media (width>800px) {
-    max-width: 60%;
-    min-width: 800px;
-  };
-  @media (width<800px) {
-    max-width: 95%;
-    min-width: 300px;
-  };
 }
 
 
@@ -49,8 +32,7 @@ body {
 
 
 .content {
-  background-color: #282828;
-  color: #ffffff; /* Цвет текста */
+  color: #000000; /* Цвет текста */
   font-family:'Verdana', sans-serif; 
   padding-top: 10px;
   padding-bottom: 200px;
@@ -61,7 +43,7 @@ body {
 }
 
 p.number {
-  color: #ffffff; /* Цвет текста */
+  color: #000000; /* Цвет текста */
   font-family:'Verdana', sans-serif;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -70,7 +52,7 @@ p.number {
   }
 
 p {
-    color: #ffffff; /* Цвет текста */
+    color: #000000; /* Цвет текста */
     font-family:'Verdana', sans-serif;
     padding: 0;
     @media (width>800px) {
@@ -83,7 +65,7 @@ p {
 
 
 li {
-  color: #ffffff; /* Цвет текста */
+  color: #000000; /* Цвет текста */
   font-family:'Verdana', sans-serif;
   padding: 4px;
   @media (width>800px) {
@@ -101,7 +83,7 @@ h2 {
 }
 
 a {
-  color: #ffffff; /* Цвет текста */
+  color: #000000; /* Цвет текста */
   font-family:'Verdana', sans-serif;
   text-decoration: none;
   @media (width>800px) {
@@ -118,7 +100,7 @@ a.address {
 
 
 a.href_copy {
-  color: #ffffff; /* Цвет текста */
+  color: #000000; /* Цвет текста */
   margin-left: 5px; /* Отступ слева в пикселах */
   margin-right: 5px; /* Отступ справа в пикселах */
   font-family:'Verdana', sans-serif;
