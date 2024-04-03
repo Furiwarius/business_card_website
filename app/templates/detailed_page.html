@@ -1,0 +1,19 @@
+{% extends "sample.html" %}
+{% block content %}
+    <a class="href_button" href="/">На главную</a>
+    <div class="block">
+        {% for elem in filling.page.content %}
+            {% if elem.chapter %}
+                <h2>{{ elem.chapter }}</h2>
+            {% elif elem.list %}
+                <ul>
+                {% for elem_list in elem.list %}
+                    <li>{{elem_list}}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+            <p>{{ elem }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

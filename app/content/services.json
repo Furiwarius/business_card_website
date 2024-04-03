@@ -1,0 +1,38 @@
+{ "service_list": [
+    {"service_name": "Проектирование металлокаркасов",
+    "list": ["Процесс", "Рассчет сроков", "Расчет стоимости"],
+    "href": "/metal_frame_design"},
+    
+    {"service_name": "Монтаж металлоконструкций",
+    "list": ["Технологии", "Сроки выполнения работ", "Стоимость"],
+    "href": "/installation_of_metal_structures"},
+
+    {"service_name": "Плазменная резка металла",
+    "list": ["Сфера применения", "Преимущества", "Цены"],
+    "href": "/plasma_cutting_of_metal"},
+
+    {"service_name": "Газовая резка металла",
+    "list": ["Особенности технологии", "Преимущества", "Стоимость"],
+    "href": "/gas_metal_cutting"},
+
+    {"service_name": "Резка металла гильотиной",
+    "list": ["Преимущества", "требования к заготовкам", "Стоимость работ"],
+    "href": "/cutting_metal_with_a_guillotine"},
+
+    {"service_name": "Сварка полуавтоматом",
+    "list": ["Особенности", "Преимущества", "Стоимость"],
+    "href": "/semi-automatic_welding"},
+
+    {"service_name": "Сварка аргоном",
+    "list": ["Процесс", "Строки", "Цены"],
+    "href": "/argon_welding"},
+
+    {"service_name": "Сверлильно-фрезерные работы",
+    "list": ["Процесс", "Строки", "Цены"],
+    "href": "/drilling_and_milling_work"},
+
+    {"service_name": "Пескоструйная обработка металла",
+    "list": ["Процесс", "Строки", "Цены"],
+    "href": "/sandblasting_metal"}
+]
+}

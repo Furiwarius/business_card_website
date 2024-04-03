@@ -1,0 +1,32 @@
+
+{% block form %}
+    <div id="blackout">
+        <div id="window">
+            <form action="/form" method="post">
+                <div class="title_cross">
+                    <div>
+                        <h3 class="form_title">Оставьте свою заявку</h3>
+                    </div>
+                    <div>
+                        <a href="#" class="close" ><img class="cross" src="static\img\cross.png"></a>
+                    </div>        
+                </div>
+                <div class="form_name_number">
+                    <div class="form">
+                        {# выводим название поля #}
+                        {{ form.username.label }}
+                        {{ form.username() }}
+                    </div>
+                    <div class="form">
+                        {{ form.phonenumber.label }}
+                        {{ form.phonenumber() }}
+                    </div>
+                </div>
+                {{ form.message }}
+            <div class="submit_button">
+                {{ form.submit(class_="submit") }}
+            </div>
+        </form>
+        </div>
+    </div>
+{% endblock %}
