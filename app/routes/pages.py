@@ -1,5 +1,5 @@
 from app.adapters.content_collector import content_collector_to_dict
-from app.adapters.sending_notifications import sending_notifications
+from app.adapters.sending_notifications import SenderOfMessages
 import os
 from .errors import page_not_found
 from .form_bid import ContactForm, form
@@ -7,6 +7,8 @@ from flask import (Blueprint, render_template, request)
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
+setting_path = "app\setting\email.ini"
+sender = SenderOfMessages(setting_path=setting_path)
 
 
 # Главная страница
@@ -41,7 +43,7 @@ def service_page(service_path:str):
 def bid():
   form = ContactForm(request.form)
   if request.method == 'POST' and form.validate():    
-    sending_notifications(username = form.username.data,
+    sender.sending_notifications(username = form.username.data,
                                                 number = form.phonenumber.data,
                                                 message = form.message.data)
 
