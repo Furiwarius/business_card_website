@@ -4,15 +4,26 @@ from configparser import ConfigParser
 import jinja2
 
 
+setting_path = "setting\email.ini"
+
+
+def file_availability_check(file_path: str) -> bool:
+    '''
+    Проверка наличия файла ini
+    '''
+
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(base_path, file_path)
+
+    return os.path.exists(config_path)
+
+
 def send_bid(massage:str) -> None:
     '''
     Отправка сообщения на почту
     '''
-    # Проверка наличия файла ini
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(base_path, "setting\email.ini")
 
-    if os.path.exists(config_path):
+    if file_availability_check(setting_path):
         config = ConfigParser()
         config.read('setting\email.ini')
 
