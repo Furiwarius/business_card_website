@@ -3,7 +3,7 @@ from app.routes.form_bid import ContactForm
 import app.routes.pages as pages
 
 
-app = Flask(__name__, template_folder='app/templates')
+app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
 form = ContactForm()
 app.register_blueprint(pages.bp)
 
