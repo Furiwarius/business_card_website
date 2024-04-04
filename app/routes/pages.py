@@ -28,7 +28,7 @@ def vacancies_page():
 # Страница с информацией об услугах
 @bp.route('/<path:service_path>')
 def service_page(service_path:str):
-  if os.path.exists(F'content/{service_path}.json')==False:
+  if os.path.exists(F'app/content/{service_path}.json')==False:
      return page_not_found(e=404, form=form)
   else:
     filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
