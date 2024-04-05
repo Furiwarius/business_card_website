@@ -3,6 +3,7 @@ from app.adapters.sending_notifications import SenderOfMessages
 import os
 from .errors import page_not_found
 from .form_bid import ContactForm, form
+from app.logger.logger import log
 from flask import (Blueprint, render_template, request)
 
 
@@ -31,6 +32,7 @@ def vacancies_page():
 @bp.route('/<path:service_path>')
 def service_page(service_path:str):
   if os.path.exists(F'app/content/{service_path}.json')==False:
+
      return page_not_found(e=404, form=form)
   else:
     filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
@@ -42,7 +44,7 @@ def service_page(service_path:str):
 @bp.route('/form', methods=['post', 'get'])
 def bid():
   form = ContactForm(request.form)
-  if request.method == 'POST' and form.validate():    
+  if request.method == 'POST' and form.validate():   
     sender.sending_notifications(username = form.username.data,
                                                 number = form.phonenumber.data,
                                                 message = form.message.data)
