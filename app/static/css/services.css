@@ -9,8 +9,8 @@
 }
 
 a.services_elem{
-    background: #5b5a5a; /* Цвет фона */ 
-    border: 0.25px solid #000;
+    background: #ffffff; /* Цвет фона */ 
+    border: 0.25px solid #D0C6C6;
     min-height: 170px;
     border-radius: 15px;
     padding: 0px;
@@ -31,7 +31,7 @@ a.services_elem{
 
 
 .services_elem_head{
-    background: #444343; /* Цвет фона */ 
+    background: #ffffff; /* Цвет фона */ 
     font-size: 12pt;
     padding-bottom: 2px;
     padding-top: 2px;
