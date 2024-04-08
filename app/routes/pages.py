@@ -45,9 +45,9 @@ def service_page(service_path:str):
 def bid():
   form = ContactForm(request.form)
   if request.method == 'POST' and form.validate():   
-    sender.sending_notifications(username = form.username.data,
-                                                number = form.phonenumber.data,
-                                                email = form.email.data)
+    sender.sending_notifications(username=form.username.data,
+                                            phonnumber=form.phonenumber.data,
+                                            email=form.email.data)
 
   filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
   return render_template('home.html', filling=filling, form=form)

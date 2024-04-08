@@ -90,11 +90,11 @@ class SenderOfMessages():
         return letter
 
 
-    def sending_notifications (self, username:str, phonnumber:str, message=None) -> None:
+    def sending_notifications (self, username:str, phonnumber:str, email:str) -> None:
         '''
         Главный метод-менеджер, принимающий данные и отправляющий их на почту
         '''
-        text_letter = self.render_letter(username=username, phonnumber=phonnumber, message=message)
+        text_letter = self.render_letter(username=username, phonnumber=phonnumber, email=email)
         self.send_bid(self.setting_letter(text_letter))
 
 
