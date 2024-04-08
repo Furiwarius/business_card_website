@@ -1,32 +1,23 @@
 
 {% block form %}
-    <div id="blackout">
-        <div id="window">
+        <div class="form_zone">
             <form action="/form" method="post">
-                <div class="title_cross">
-                    <div>
-                        <h3 class="form_title">Оставьте свою заявку</h3>
-                    </div>
-                    <div>
-                        <a href="#" class="close" ><img class="cross" src="static\img\cross.png"></a>
-                    </div>        
-                </div>
+                <h2 class="form_title">Оставьте свою заявку</h2>
+                <h2 class="form_preface">Наш специалист свяжется с вами для консультации</h2>
                 <div class="form_name_number">
                     <div class="form">
-                        {# выводим название поля #}
-                        {{ form.username.label }}
-                        {{ form.username() }}
+                        {{ form.username(placeholder="Ваше имя") }}
                     </div>
                     <div class="form">
-                        {{ form.phonenumber.label }}
-                        {{ form.phonenumber() }}
+                        {{ form.phonenumber(placeholder="8 (900) 000-00-00") }}
+                    </div>
+                    <div class="form">
+                        {{ form.email(placeholder="Email") }}
+                    </div>
+                    <div class="submit_button">
+                        {{ form.submit(class_="submit") }}
                     </div>
                 </div>
-                {{ form.message }}
-            <div class="submit_button">
-                {{ form.submit(class_="submit") }}
-            </div>
         </form>
         </div>
-    </div>
 {% endblock %}

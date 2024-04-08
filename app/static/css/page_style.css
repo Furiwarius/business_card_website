@@ -21,15 +21,17 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   padding: 0px;
+  border-bottom: 0.5px solid #D0C6C6;
 }
 
-
-.maps_zone {
-  margin-top: 40px;
-  place-items: center;
+.block_non_standard {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px;
+  border-bottom: 0.5px solid #D0C6C6;
 }
-
-
 
 .content {
   color: #000000; /* Цвет текста */
@@ -55,6 +57,7 @@ p {
     color: #000000; /* Цвет текста */
     font-family:'Verdana', sans-serif;
     padding: 0;
+    text-align: justify;
     @media (width>800px) {
       font-size: 11pt;
     };
@@ -78,8 +81,31 @@ li {
 
 
 h2 {
-  padding-left: 15px;
-  font-size: 16pt;
+  color: #000000;
+  font-size: 30pt;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  @media (width<800px) {
+    font-size: 27pt;
+  }
+  @media (width<700px) {
+    font-size: 20pt;
+  }
+}
+
+h2.preface{
+  color: #817979;
+  font-size: 14pt;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 15px;
+  @media (width<800px) {
+    font-size: 10pt;
+  }
+  @media (width<700px) {
+    font-size: 8pt;
+  }
 }
 
 a {
@@ -94,34 +120,6 @@ a {
   }
 }
 
-a.address {
-  font-family:'Verdana', sans-serif;
-}
-
-
-a.href_copy {
-  color: #000000; /* Цвет текста */
-  margin-left: 5px; /* Отступ слева в пикселах */
-  margin-right: 5px; /* Отступ справа в пикселах */
-  font-family:'Verdana', sans-serif;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px; 
-  cursor: pointer;
-  @media (width>800px) {
-    font-size: 11pt;
-  };
-  @media (width<800px) {
-    font-size: 9pt;
-  }
-  }
-  a.href_copy:visited {
-      color: #ffffff; /* Цвет посещённой ссылки */
-  } 
-  a.href_copy:hover {
-      color: #6b6868; /* Цвет ссылки при наведении */ 
-      text-decoration: underline; /* Добавляем подчёркивание */
-  }
 
 a[download]::after {
   content: url(/example/image/download.png); /* Выводим картинку */
@@ -129,25 +127,8 @@ a[download]::after {
   padding-left: 5px; /* Расстояние от текста до картинки */
 }
 
-iframe {
-  margin: auto;
-  border-radius: 15px;
-  border: 0;
-  display: grid;
-  @media (width>800px) {
-    width: 700px;
-    height : 450px;
-  };
-  @media (width<800px) {
-    width: 500px;
-    height : 300px;
-  };
-}
 
 footer {
-  background: #201f1f; /* Цвет фона */ 
-  border-radius: 15px 15px 0px 0px;
-  border: 0.5px solid #000;
   bottom: 0;
   padding: 10px;
   display: flex;

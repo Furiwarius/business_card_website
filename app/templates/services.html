@@ -1,6 +1,7 @@
 {% block services %}
     <div class="block">
-        <h2>Наши услуги</h2>
+        <h2 id="services">Наши услуги</h2>
+        <h2 class="preface">Профессиональное изготовление, сборка и монтаж металлоконструкций, различные работы по обработке металла.</h2>
         <div class="services_zone">
             {% for service in filling.services_content.service_list %}
                 <a class="services_elem"  href="{{ service.href }}">

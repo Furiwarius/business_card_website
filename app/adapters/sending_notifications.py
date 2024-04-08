@@ -34,9 +34,8 @@ class SenderOfMessages():
 
         self.subject = config.get("setting letter", "subject")
 
-        self.path_to_letter_without_message = config.get("setting letter", "path_to_letter_without_message")
-        self.path_to_letter_with_message = config.get("setting letter", "path_to_letter_with_message")
-
+        self.path_to_letter = config.get("setting letter", "path_to_letter")
+        
 
     def file_availability_check(self, file_path: str) -> bool:
         '''
@@ -73,14 +72,12 @@ class SenderOfMessages():
 
 
 
-    def render_letter(self, username:str, phonnumber:str, message=None) -> str:
+    def render_letter(self, username:str, phonnumber:str, email:str) -> str:
         '''
         Вставка данных в шаблон
         '''
 
-        filename = self.path_to_letter_with_message
-        if message==None:
-            filename=self.path_to_letter_without_message
+        filename = self.path_to_letter
 
         with open(filename, 'r', encoding='utf-8') as template_file:
             template_file_content = template_file.read()
@@ -88,16 +85,15 @@ class SenderOfMessages():
         template = environment.from_string(template_file_content)
         letter = template.render(username=username,
                                 number=phonnumber,
-                                message=message)
+                                email=email)
         
         return letter
 
 
-    def sending_notifications (self, username:str, phonnumber:str, message=None) -> None:
+    def sending_notifications (self, username:str, phonnumber:str, email:str) -> None:
         '''
         Главный метод-менеджер, принимающий данные и отправляющий их на почту
         '''
-        text_letter = self.render_letter(username=username, phonnumber=phonnumber, message=message)
+        text_letter = self.render_letter(username=username, phonnumber=phonnumber, email=email)
         self.send_bid(self.setting_letter(text_letter))
-
 

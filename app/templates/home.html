@@ -1,7 +1,8 @@
 {% extends "sample.html" %}
 {% block content %}
 	<div class="block">
-		<h2>Изготовление и монтаж металлоконструкций</h2>
+		<h2 id="about_company">Изготовление и монтаж металлоконструкций</h2>
+		<h2 class="preface">Профессиональный подход и опыт более 10 лет<h2>
 		{% for item in filling.page.content %}
 			<p>{{ item }}</p>
 		{% endfor %}
@@ -12,18 +13,28 @@
 	{% endblock %}
 
 	<div class="block">
-        <h2>Трудостройство</h2>
+        <h2 id="vacancies">Трудостройство</h2>
+		<h2 class="preface">Найдется место для каждого!</h2>
         <p>Наша фирма нуждается в ответственных и трудолюбивых работниках. Мы будем рады принять Вас на работу в наш дружный коллектив</p>
 		<p>Если Вы здесь по поводу трудоустройство, то можете посмотреть подробнее о доступных вакансиях, и если что-то заинтересует, то обязательно свяжитесь с нами.</p>
         <a class="href_button" href="/vacancies_info">Смотреть вакансии</a>
     </div>
 
-	<div class="block">
-		<h2 id="maps">Наше месторасположение</h2>
-		<p>Наш цех находится по адресу: {{ filling.contacts.address }}</p>
-		<p>Наши сотрудники всегда рады помочь вам найти нас, ответить на ваши вопросы и провести экскурсию по нашему цеху. Мы ждем вас в любое удобное время, чтобы показать вам, как мы создаем качественные металлические конструкции своими умелыми руками.</p>
+	{% block form %}
+	{% include "form.html" %}
+	{% endblock %}
+
+	<div class="block_non_standard">
+		<h2 id="contacts"></h2>
+			<div class="contact">
+				<h2 class="caption">Контакты</h2>
+				<a class="href_copy">{{ filling.contacts.number }}</a>
+				<a class="href_copy">{{ filling.contacts.email }}</a>
+				<p class="address">{{ filling.contacts.address }}</p>
+			</div>
 		<div class="maps_zone">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d484.6252706050752!2d20.552247983666632!3d54.70470946473637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d54.704776599999995!2d20.552236699999998!5e0!3m2!1sru!2sru!4v1711291151486!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Здесь должна быть карта, но почему-то она пропала</iframe>
 		</div>
 	</div>
+	
 {% endblock %}
