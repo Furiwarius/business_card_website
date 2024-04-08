@@ -17,7 +17,6 @@
 
 
 iframe {
-    border-radius: 15px;
     margin: 0;
     border: 0;
     @media (width>800px) {
