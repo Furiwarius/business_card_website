@@ -3,12 +3,12 @@ from app.adapters.sending_notifications import SenderOfMessages
 import os
 from .errors import page_not_found
 from .form_bid import ContactForm, form
-from app.logger.logger import log
 from flask import (Blueprint, render_template, request)
+import app.logger.logger
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
-setting_path = "app\setting\email.ini"
+setting_path = r"app\setting\email.ini"
 sender = SenderOfMessages(setting_path=setting_path)
 
 
@@ -47,7 +47,7 @@ def bid():
   if request.method == 'POST' and form.validate():   
     sender.sending_notifications(username = form.username.data,
                                                 number = form.phonenumber.data,
-                                                message = form.message.data)
+                                                email = form.email.data)
 
   filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
   return render_template('home.html', filling=filling, form=form)
