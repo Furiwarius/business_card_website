@@ -97,4 +97,3 @@ class SenderOfMessages():
         text_letter = self.render_letter(username=username, phonnumber=phonnumber, email=email)
         self.send_bid(self.setting_letter(text_letter))
 
-
