@@ -1,18 +1,14 @@
 .form_zone {
-    background: #434242; /* Цвет фона */ 
-    border-radius: 15px;
-    padding: 15px;
+    background-image: url(//img/metal_background.jpg);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px;
+    border-bottom: 0.5px solid #D0C6C6;
     align-items: center;
-    @media (width>800px) {
-        min-width: 800px;
-        font-size: 11pt;
-    };
-    @media (width<800px) {
-        max-width: 100%;
-        min-width: 300px;
-        font-size: 9pt;
-    };
 }
+
 
 .form_name_number{
     display: flex;

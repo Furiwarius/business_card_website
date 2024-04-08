@@ -1,0 +1,75 @@
+2024-04-08 08:59:34,572 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-08 08:59:34,572 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-04-08 08:59:34,584 - werkzeug - INFO -  * Restarting with stat
+2024-04-08 08:59:34,805 - werkzeug - WARNING -  * Debugger is active!
+2024-04-08 08:59:34,821 - werkzeug - INFO -  * Debugger PIN: 532-089-766
+2024-04-08 09:00:15,154 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "GET / HTTP/1.1" 200 -
+2024-04-08 09:00:15,261 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "GET /static/css/contacts.css HTTP/1.1" 200 -
+2024-04-08 09:00:15,262 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "GET /static/css/page_style.css HTTP/1.1" 200 -
+2024-04-08 09:00:15,270 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-04-08 09:00:15,271 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "GET /static/css/services.css HTTP/1.1" 200 -
+2024-04-08 09:00:15,271 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:00:15,272 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:00:15,277 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:00:15] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:15:18,435 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-08 09:15:18,435 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-04-08 09:15:18,438 - werkzeug - INFO -  * Restarting with stat
+2024-04-08 09:15:18,661 - werkzeug - WARNING -  * Debugger is active!
+2024-04-08 09:15:18,676 - werkzeug - INFO -  * Debugger PIN: 532-089-766
+2024-04-08 09:15:29,361 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "GET / HTTP/1.1" 200 -
+2024-04-08 09:15:29,460 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-04-08 09:15:29,463 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:15:29,468 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-04-08 09:15:29,472 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-04-08 09:15:29,473 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:15:29,474 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:15:29,478 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "GET /static/css/form.css HTTP/1.1" 200 -
+2024-04-08 09:15:29,704 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:15:29] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,194 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "GET / HTTP/1.1" 200 -
+2024-04-08 09:17:35,209 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,211 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,212 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,214 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,215 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,216 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:17:35,221 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "GET /static/css/form.css HTTP/1.1" 200 -
+2024-04-08 09:17:35,394 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:35] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,117 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "GET / HTTP/1.1" 200 -
+2024-04-08 09:17:43,134 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,138 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,139 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,142 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,142 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,143 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:17:43,146 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "GET /static/css/form.css HTTP/1.1" 200 -
+2024-04-08 09:17:43,401 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:43] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,083 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "GET / HTTP/1.1" 200 -
+2024-04-08 09:17:58,097 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,103 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,104 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,105 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,105 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,105 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:17:58,111 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "GET /static/css/form.css HTTP/1.1" 200 -
+2024-04-08 09:17:58,281 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:17:58] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,842 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "GET / HTTP/1.1" 200 -
+2024-04-08 09:19:42,856 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,858 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,859 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,861 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,861 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "GET /static/css/form.css HTTP/1.1" 200 -
+2024-04-08 09:19:42,862 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,863 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:19:42,870 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:42] "[33mGET /static/css/img/metal_background.jpg HTTP/1.1[0m" 404 -
+2024-04-08 09:19:43,104 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:43] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,026 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "GET / HTTP/1.1" 200 -
+2024-04-08 09:19:54,047 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,047 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,048 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,051 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,052 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,052 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-04-08 09:19:54,056 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:54] "GET /static/css/form.css HTTP/1.1" 200 -
+2024-04-08 09:19:56,353 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2024 09:19:56] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
