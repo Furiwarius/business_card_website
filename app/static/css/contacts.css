@@ -1,17 +1,27 @@
+.block_non_standard {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px;
+  border-bottom: 0.5px solid #D0C6C6;
+  @media (width>1000px) {
+    display: flex;
+  }
+}
+
 
 .maps_zone {
     margin: 0;
     place-items: center;
+    width: 100%;
   }
   
 
 .contact{
-    background-color: #E74040;
-    border-radius: 15px;
-    top: 320px;
-    left: 150px;
-    position: relative;
-    width: 250px;
+    background-color: #ffffff;
+    border: 0.25px solid #D0C6C6;
+    margin: 0;
     padding: 15px;
 }
 
@@ -19,57 +29,63 @@
 iframe {
     margin: 0;
     border: 0;
-    @media (width>800px) {
-      width: 100%;
-      height : 550px;
-    };
-    @media (width<800px) {
-      width: 500px;
-      height : 300px;
-    };
+    width: 100%;
+    height : 550px;
 }
 
 
 h2.caption {
     text-align: left;
-    padding-bottom: 5px;
-    color: #FFFFFF;
-    font-size: 14pt;
-    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #000000;
+    font-size: 30pt;
+    @media (width<1300px) {
+      font-size: 25pt;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @media (width<800px) {
+      font-size: 20pt;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
 }
 
 
 p.address {
     font-family:'Verdana', sans-serif;
-    color: #FFFFFF;
-    padding-top: 7px;
-    margin: 0;
-    @media (width>800px) {
-        font-size: 11pt;
-    };
+    color: #000000;
+    padding-top: 15px;
+    text-align: left;
+    font-size: 14pt;
+    @media (width<1300px) {
+      font-size: 12pt;
+    }
     @media (width<800px) {
-        font-size: 9pt;
+        font-size: 11pt;
     }
 }
 
 
 a.href_copy {
-    color: #FFFFFF;
+    color: #000000;
     cursor: pointer;
     display: block;
-    padding-top: 7px;
-    @media (width>800px) {
-      font-size: 11pt;
-    };
+    padding-top: 15px;
+    font-size: 14pt;
+    @media (width<1300px) {
+      font-size: 12pt;
+    }
     @media (width<800px) {
-      font-size: 9pt;
+      font-size: 11pt;
     }
     }
     a.href_copy:visited {
-        color: #ffffff; /* Цвет посещённой ссылки */
+        color: #000000; /* Цвет посещённой ссылки */
     } 
     a.href_copy:hover {
-        color: #342828; /* Цвет ссылки при наведении */ 
+        color: #FE143E;
         text-decoration: underline; /* Добавляем подчёркивание */
     }
   
