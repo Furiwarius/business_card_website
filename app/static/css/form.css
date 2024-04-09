@@ -15,7 +15,7 @@
     justify-content: center;
     padding-top: 40px;
     margin: auto;
-    @media (width>1200px) {
+    @media (width>1300px) {
         display: flex;
     }
 }
