@@ -2,7 +2,7 @@
     align-items: center;
     width: 100%;
     margin: 0;
-    @media (width>700px) {
+    @media (width>1000px) {
         display: flex;
         justify-content: space-around;
     };
@@ -18,20 +18,14 @@ a.services_elem{
     margin: 5px;
     cursor: pointer;
     display: block;
-    @media (width>800px) {
-        width: 400px;
-    };
-    @media (width<800px) {
-        min-width: 220px;
-    };
-    @media (width<700px) {
-        width: 100%;
-    };
+    width: 100%;
+}
+a.services_elem:hover{
+    background-color: #FE143E;
 }
 
 
 .services_elem_head{
-    background: #ffffff; /* Цвет фона */ 
     font-size: 12pt;
     padding-bottom: 2px;
     padding-top: 2px;
