@@ -15,6 +15,19 @@
                 <a href="/" class="menu_href">На главную</a>
             {% endif %}
         </div>
+        {% if filling.page.page_name == 'Главная' %}
+        <div class="pop_up_menu">
+            <button class="pop_up_menu_btn"></button>
+            <div class="pop_up_menu-content">
+                <a href="#about_company" class="pop_up_menu_href">О компании</a>
+                <a href="#services" class="pop_up_menu_href">Услуги</a>
+                <a href="#vacancies" class="pop_up_menu_href">Трудоустройство</a>
+                <a href="#contacts" class="pop_up_menu_href">Контакты</a>
+            </div>
+        </div>
+        {% else %}
+                <p>Пока в работе</p>
+        {% endif %}
     </div>
 {% endblock %}
 

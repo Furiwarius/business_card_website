@@ -5,10 +5,8 @@
     margin: auto;
     display: flex;
     width: auto;
-    @media (width>800px) {
-        align-items: center;
-        justify-content: space-between;
-    };
+    align-items: center;
+    justify-content: space-between;
 }
 
 .title_block {
@@ -34,11 +32,54 @@
     };
 }
 
-.round_menu {
-    display: none;
-    @media (width<1150px) {
-        display: block;
+.pop_up_menu {
+    border-radius: 15px;
+    @media (width>1150px) {
+        display: none;
     };
+}
+.pop_up_menu:hover {
+    background-color: #E74040;
+}
+
+button.pop_up_menu_btn {
+    background-image: url(../img/menu.png);
+    background-size: cover;
+    background-color: inherit;
+    padding: 20px;
+    border: none;
+    outline: none;
+    margin: 10px;
+}
+
+.pop_up_menu-content {
+    display: none;
+    position: absolute;
+    right: 10%;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  a.pop_up_menu_href {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .pop_up_menu-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .pop_up_menu:hover .pop_up_menu-content {
+    /* Если курсор наведен на pop_up_menu, то выполняется данное действие */
+    display: block;
+  }
+
+
+.home_button {
+    background-color: #000000;
 }
 
 
