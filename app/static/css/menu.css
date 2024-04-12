@@ -26,7 +26,6 @@
     background: inherit;
     margin: 15px;
     padding: 10px;
-    display: block;
     @media (width<1150px) {
         display: none;
     };
@@ -78,8 +77,21 @@ button.pop_up_menu_btn {
   }
 
 
-.home_button {
-    background-color: #000000;
+a.home_button {
+    background-image: url(../img/back.png);
+    background-size: cover;
+    border-radius: 15px;
+    padding: 30px;
+    border: none;
+    outline: none;
+    margin: 10px;
+    display: block;
+    @media (width>1150px) {
+        display: none;
+    };
+}
+a.home_button:hover {
+    background-color: #E74040;
 }
 
 
@@ -105,3 +117,5 @@ a.menu_href {
 a.menu_href:hover{
     color: #FE143E;
 }
+
+
