@@ -43,10 +43,10 @@ p {
     text-align: justify;
     font-weight: 300;
     @media (width>800px) {
-      font-size: 11pt;
+      font-size: 12pt;
     };
     @media (width<800px) {
-      font-size: 10pt;
+      font-size: 11pt;
     }
   }
 
@@ -56,10 +56,10 @@ li {
   font-family:'Verdana', sans-serif;
   padding: 4px;
   @media (width>800px) {
-    font-size: 11pt;
+    font-size: 12pt;
   };
   @media (width<800px) {
-    font-size: 10pt;
+    font-size: 11pt;
   }
 }
 
