@@ -31,11 +31,17 @@
     };
 }
 
-.pop_up_menu {
-    border-radius: 15px;
+.pop_up_menu_zone{
+    background: inherit;
+    margin: 15px;
+    padding: 10px;
     @media (width>1150px) {
         display: none;
     };
+}
+
+.pop_up_menu {
+    border-radius: 15px;
 }
 .pop_up_menu:hover {
     background-color: #E74040;
@@ -117,5 +123,3 @@ a.menu_href {
 a.menu_href:hover{
     color: #FE143E;
 }
-
-
