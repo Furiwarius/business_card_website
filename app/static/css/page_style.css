@@ -103,3 +103,25 @@ a {
     font-size: 11pt;
   }
 }
+
+a.href_button {
+  color: #000000;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-weight: 300;
+  @media (width>800px) {
+    font-size: 12pt;
+  }
+  @media (width<800px) {
+    font-size: 11pt;
+  }
+  }
+a.href_button:visited {
+  color: #000000; /* Цвет посещённой ссылки */
+} 
+a.href_button:hover {
+  color: #FE143E;
+  text-decoration: underline; /* Добавляем подчёркивание */
+}
