@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="../static/css/form.css">
 		<link rel="stylesheet" href="../static/css/button_up.css">
 		<link rel="stylesheet" href="../static/css/services.css">
-		<link rel="stylesheet" href="../static/css/slider.css">
+		<link rel="stylesheet" href="../static/css/footer.css">
 		<link rel="icon" href="static\img\icon_welder.png" type="image/x-icon">
 		<script src="static\js\btn_up.js"></script>
 		<script src="static\js\copy.js"></script>
@@ -30,28 +30,9 @@
 				</div>
 				<button onclick="topFunction()" id="myBtn" title="Наверх">Вверх</button>
 				
-				<footer>
-					<div class="footer_number_block">
-						<div class="footer_block">
-							<div class="number_block">
-								<p class="explanations">Наш номер</p>
-								<a id="number" onclick="Copy('number')" class="menu_href_copy">{{ filling.contacts.number }}</a>
-							</div>
-							<div class="number_block">
-								<p class="explanations">Наша почта</p>
-								<a id="email" onclick="Copy('email')" class="menu_href_copy">{{ filling.contacts.email }}</a>
-							</div>
-						</div>
-					</div>
-					<div class="footer_block">
-						<p>Гhафические элементы взяты с <a href="https://www.flaticon.com/">flaticon.com</a></p>
-						<p>metalist.ru искользует VPS от компании Beget</p>
-					</div>
-					<div class="footer_block">
-						<p>Нашли ошибку?</p>
-						<p>Свяжитесь с нами для ее устранения.</p>
-					</div>
-				</footer>
+				{% block footer%}
+					{% include "footer.html" %}
+				{% endblock %}
 			</div>
 		</div>
     </body>
