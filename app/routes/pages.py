@@ -1,10 +1,12 @@
 from app.adapters.content_collector import content_collector_to_dict
-from app.adapters.sending_notifications import SenderOfMessages
+from app.adapters.sending_notifications.sending_notifications import SenderOfMessages
+from app.adapters.sending_notifications.save_notifications import save_notifications
 import os
 from .errors import page_not_found
 from .form_bid import ContactForm, form
 from flask import (Blueprint, render_template, request)
 import app.logger.logger
+from smtplib import SMTPAuthenticationError
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
@@ -45,9 +47,15 @@ def service_page(service_path:str):
 def bid():
   form = ContactForm(request.form)
   if request.method == 'POST' and form.validate():   
-    sender.sending_notifications(username=form.username.data,
-                                            phonnumber=form.phonenumber.data,
-                                            email=form.email.data)
+    try:
+      sender.sending_notifications(username=form.username.data,
+                                              phonnumber=form.phonenumber.data,
+                                              email=form.email.data)
+    except SMTPAuthenticationError:
+      save_notifications(username=form.username.data,
+                          phonnumber=form.phonenumber.data,
+                          email=form.email.data)
 
+    
   filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
   return render_template('home.html', filling=filling, form=form)
