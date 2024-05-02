@@ -1,0 +1,24 @@
+{% block form %}
+
+<footer>
+    <div class="footer_number_block">
+        <div class="footer_block">
+            <div class="number_block">
+                <p class="footer_text">Наш номер</p>
+                <a id="copy_phonenumber" onclick="Copy('copy_phonenumber')" class="footer_href">{{ filling.contacts.number }}</a>
+            </div>
+            <div class="number_block">
+                <p class="footer_text">Наша почта</p>
+                <a id="copy_email" onclick="Copy('copy_email')" class="footer_href">{{ filling.contacts.email }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer_block">
+        <a class="footer_href" href="https://www.flaticon.com/">Гhафические элементы взяты с flaticon.com</a>
+        <a class="footer_href" href="https://beget.com/">metalist.ru искользует VPS от компании Beget</a>
+        <p class="footer_text">Нашли ошибку?</p>
+        <p class="footer_text">Свяжитесь с нами для ее устранения.</p>
+    </div>
+</footer>
+
+{% endblock %}
