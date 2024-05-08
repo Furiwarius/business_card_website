@@ -4,7 +4,7 @@ from app.adapters.sending_notifications.save_notifications import save_notificat
 import os
 from .errors import page_not_found
 from .form_bid import ContactForm, form
-from flask import (Blueprint, render_template, request)
+from flask import (Blueprint, render_template, request, redirect, url_for)
 import app.logger.logger
 from smtplib import SMTPAuthenticationError
 
