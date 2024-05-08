@@ -39,9 +39,9 @@ h2.caption {
     padding-top: 15px;
     padding-bottom: 15px;
     color: #000000;
-    font-size: 30pt;
+    font-size: 24pt;
     @media (width<1300px) {
-      font-size: 25pt;
+      font-size: 22pt;
       padding-top: 10px;
       padding-bottom: 10px;
     }
