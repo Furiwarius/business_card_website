@@ -72,6 +72,13 @@ button.pop_up_menu_btn {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family:'Verdana', sans-serif;
+    @media (width>800px) {
+        font-size: 14pt;
+      };
+      @media (width<800px) {
+        font-size: 13pt;
+      }
   }
   .pop_up_menu-content a:hover {
     background-color: #ddd;
