@@ -46,7 +46,9 @@ def service_page(service_path:str):
 @bp.route('/form', methods=['post', 'get'])
 def bid():
   form = ContactForm(request.form)
-  if request.method == 'POST' and form.validate():   
+  if request.method == 'GET':
+    return home_page()
+  elif request.method == 'POST' and form.validate():   
     try:
       sender.sending_notifications(username=form.username.data,
                                               phonnumber=form.phonenumber.data,
@@ -55,7 +57,5 @@ def bid():
       save_notifications(username=form.username.data,
                           phonnumber=form.phonenumber.data,
                           email=form.email.data)
-
-    
-  filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
-  return render_template('home.html', filling=filling, form=form)
+  
+    return home_page()
