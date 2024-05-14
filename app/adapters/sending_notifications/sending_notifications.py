@@ -9,7 +9,7 @@ class SenderOfMessages():
     Отправитель сообщений
     '''
     
-    def __init__(self, setting_path:str) -> bool:
+    def __init__(self, setting_path=r"app\setting\email.ini") -> bool:
 
         if self.file_availability_check(setting_path):
             self.sender_settings(setting_path)

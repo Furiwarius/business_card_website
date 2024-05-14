@@ -10,8 +10,7 @@ from smtplib import SMTPAuthenticationError
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
-setting_path = r"app\setting\email.ini"
-sender = SenderOfMessages(setting_path=setting_path)
+sender = SenderOfMessages()
 
 
 # Главная страница
