@@ -3,13 +3,14 @@ from app.adapters.sending_notifications.sending_notifications import SenderOfMes
 from app.adapters.sending_notifications.save_notifications import save_notifications
 import os
 from .errors import page_not_found
-from .form_bid import ContactForm, form
-from flask import (Blueprint, render_template, request, redirect, url_for)
+from .form_bid import ContactForm
+from flask import (Blueprint, render_template, request)
 import app.logger.logger
 from smtplib import SMTPAuthenticationError
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
+form = ContactForm()
 sender = SenderOfMessages()
 
 

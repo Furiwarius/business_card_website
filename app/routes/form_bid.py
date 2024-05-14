@@ -1,5 +1,5 @@
-from wtforms import Form, StringField, SubmitField, TextAreaField, IntegerField
-from wtforms.validators import DataRequired, Optional, NumberRange
+from wtforms import Form, StringField, SubmitField, IntegerField
+from wtforms.validators import DataRequired, NumberRange
 
 
 class ContactForm(Form):
@@ -7,5 +7,3 @@ class ContactForm(Form):
     phonenumber = IntegerField(label="Ваш номер: ", validators=[DataRequired(), NumberRange(11)])
     email = StringField(label="Email: ", validators=[DataRequired()])
     submit = SubmitField("Оставить заявку")
-
-form = ContactForm()
