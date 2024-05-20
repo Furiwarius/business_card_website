@@ -2,6 +2,7 @@ import os
 import smtplib
 from configparser import ConfigParser
 import jinja2
+from app.setting.settings import EMAIL, PASSWORD, TO
 
 
 class SenderOfMessages():
@@ -28,9 +29,9 @@ class SenderOfMessages():
         self.server = config.get("setting", "server")
         self.port = config.get("setting", "port")
 
-        self.user = config.get("personal data", "email")
-        self.passwd = config.get("personal data", "passwd")
-        self.to = config.get("personal data", "email")
+        self.user = EMAIL
+        self.passwd = PASSWORD
+        self.to = TO
 
         self.subject = config.get("setting letter", "subject")
 
