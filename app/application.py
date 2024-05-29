@@ -36,4 +36,4 @@ class Application():
         Запуск приложения
         '''
         
-        self.__app.run(debug=dubug, port=5000) 
+        self.__app.run(debug=dubug) 
