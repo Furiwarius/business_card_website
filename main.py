@@ -3,4 +3,6 @@ from app.routes.pages import bp
 
 app = Application()
 app.add_blueprint(bp)
-app.run()
+
+if __name__ == '__main__':
+	app.run(dubug=False)
