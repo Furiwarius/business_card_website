@@ -1,0 +1,1 @@
+from app.adapters.sending_notifications.send_notifications import SendNotifications
