@@ -1,61 +1,77 @@
 from app.adapters.content_collector import content_collector_to_dict
-from app.adapters.sending_notifications.sending_notifications import SenderOfMessages
-from app.adapters.sending_notifications.save_notifications import save_notifications
+from app.adapters.sending_notifications import SendNotifications
+from app.adapters.database.save_notifications import save_notifications
 import os
-from .errors import page_not_found
-from .form_bid import ContactForm
-from flask import (Blueprint, render_template, request)
-import app.logger.logger
+from app.routes.errors import page_not_found
+from app.routes.form_bid import ContactForm
+from flask import Blueprint, render_template, request, redirect, url_for
 from smtplib import SMTPAuthenticationError
+import threading
+import app.logger.logger
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
 form = ContactForm()
-sender = SenderOfMessages()
+sender = SendNotifications()
+
 
 
 # Главная страница
 @bp.route('/')
 def home_page():
-  filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
+  '''
+  Главная страница
+  '''
+  filling:dict = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
 
   return render_template('home.html', filling=filling, form=form)
+
 
 
 # Страница с информацией о вакансиях
 @bp.route('/vacancies_info')
 def vacancies_page():
-  filling = content_collector_to_dict(page='vacancies_info', contacts='contacts')
+  '''
+  Страница с информацией о вакансиях
+  '''
+  filling:dict = content_collector_to_dict(page='vacancies_info', contacts='contacts')
 
   return render_template('detailed_page.html', filling=filling, form=form)
+
 
 
 # Страница с информацией об услугах
 @bp.route('/<path:service_path>')
 def service_page(service_path:str):
+  '''
+  Страница с информацией об услугах
+  '''
   if os.path.exists(F'app/content/{service_path}.json')==False:
 
      return page_not_found(e=404, form=form)
   else:
-    filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
+    filling:dict = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
 
     return render_template('detailed_page.html', filling=filling, form=form)
   
 
+
 # Обработка данных формы
 @bp.route('/form', methods=['post', 'get'])
 def bid():
-  form = ContactForm(request.form)
+  '''
+  Получение данных формы
+  '''
+  form:ContactForm = ContactForm(request.form)
+  
   if request.method == 'GET':
-    return home_page()
+    return redirect(url_for('app.home_page'))
+  
   elif request.method == 'POST' and form.validate():   
     try:
-      sender.sending_notifications(username=form.username.data,
-                                              phonnumber=form.phonenumber.data,
-                                              email=form.email.data)
+      threading.Thread(target=sender.sending_notifications, args=(form,)).start()
+
     except SMTPAuthenticationError:
-      save_notifications(username=form.username.data,
-                          phonnumber=form.phonenumber.data,
-                          email=form.email.data)
+      save_notifications(form)
   
-    return home_page()
+    return redirect(url_for('app.home_page'))
