@@ -4,9 +4,10 @@ from app.adapters.database.save_notifications import save_notifications
 import os
 from app.routes.errors import page_not_found
 from app.routes.form_bid import ContactForm
-from flask import Blueprint, render_template, request
-import app.logger.logger
+from flask import Blueprint, render_template, request, redirect, url_for
 from smtplib import SMTPAuthenticationError
+import threading
+import app.logger.logger
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
@@ -18,7 +19,10 @@ sender = SendNotifications()
 # Главная страница
 @bp.route('/')
 def home_page():
-  filling = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
+  '''
+  Главная страница
+  '''
+  filling:dict = content_collector_to_dict(page='home', services_content='services', contacts='contacts')
 
   return render_template('home.html', filling=filling, form=form)
 
@@ -27,7 +31,10 @@ def home_page():
 # Страница с информацией о вакансиях
 @bp.route('/vacancies_info')
 def vacancies_page():
-  filling = content_collector_to_dict(page='vacancies_info', contacts='contacts')
+  '''
+  Страница с информацией о вакансиях
+  '''
+  filling:dict = content_collector_to_dict(page='vacancies_info', contacts='contacts')
 
   return render_template('detailed_page.html', filling=filling, form=form)
 
@@ -36,11 +43,14 @@ def vacancies_page():
 # Страница с информацией об услугах
 @bp.route('/<path:service_path>')
 def service_page(service_path:str):
+  '''
+  Страница с информацией об услугах
+  '''
   if os.path.exists(F'app/content/{service_path}.json')==False:
 
      return page_not_found(e=404, form=form)
   else:
-    filling = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
+    filling:dict = content_collector_to_dict(page=f'{service_path}', contacts='contacts')
 
     return render_template('detailed_page.html', filling=filling, form=form)
   
@@ -49,15 +59,19 @@ def service_page(service_path:str):
 # Обработка данных формы
 @bp.route('/form', methods=['post', 'get'])
 def bid():
+  '''
+  Получение данных формы
+  '''
   form:ContactForm = ContactForm(request.form)
   
   if request.method == 'GET':
-    return home_page()
+    return redirect(url_for('app.home_page'))
+  
   elif request.method == 'POST' and form.validate():   
     try:
-      sender.sending_notifications(form)
+      threading.Thread(target=sender.sending_notifications, args=(form,)).start()
 
     except SMTPAuthenticationError:
       save_notifications(form)
   
-    return home_page()
+    return redirect(url_for('app.home_page'))

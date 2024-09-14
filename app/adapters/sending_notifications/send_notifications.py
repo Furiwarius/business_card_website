@@ -40,7 +40,7 @@ class SendNotifications():
         '''
         Главный метод-менеджер, принимающий данные и отправляющий их на почту
         '''
-        text_letter = self.render_letter(username=form.username, phonnumber=form.phonenumber, email=form.email)
+        text_letter = self.render_letter(username=form.username.data, phonnumber=form.phonenumber.data, email=form.email.data)
         self.email_client.send(text_letter)
         self.tg_sender.send(text_letter)
     
