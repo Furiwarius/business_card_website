@@ -1,6 +1,3 @@
-from app.application import Application
-from app.routes.pages import bp
+from app import  app
 
-app = Application()
-app.add_blueprint(bp)
 app.run()
