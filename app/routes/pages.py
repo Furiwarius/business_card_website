@@ -3,11 +3,12 @@ from app.adapters.sending_notifications import SendNotifications
 from app.adapters.database.save_notifications import save_notifications
 import os
 from app.routes.errors import page_not_found
-from app.routes.form_bid import ContactForm
+from app.routes.forms import ContactForm
 from flask import Blueprint, render_template, request, redirect, url_for
 from smtplib import SMTPAuthenticationError
 import threading
 import app.logger.logger
+from app.routes.schemas import UserForm
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
@@ -62,12 +63,12 @@ def bid():
   '''
   Получение данных формы
   '''
-  form:ContactForm = ContactForm(request.form)
+  form:UserForm = UserForm(**request.json)
   
   if request.method == 'GET':
     return redirect(url_for('app.home_page'))
   
-  elif request.method == 'POST' and form.validate():   
+  elif request.method == 'POST':   
     try:
       threading.Thread(target=sender.sending_notifications, args=(form,)).start()
 

@@ -1,4 +1,4 @@
-from app.routes.form_bid import ContactForm
+from app.routes.schemas import UserForm
 import jinja2
 from jinja2.environment import Template
 from app.setting import email_setting, tg_setting
@@ -36,11 +36,11 @@ class SendNotifications():
 
 
 
-    def sending_notifications (self, form:ContactForm) -> None:
+    def sending_notifications (self, form:UserForm) -> None:
         '''
         Главный метод-менеджер, принимающий данные и отправляющий их на почту
         '''
-        text_letter = self.render_letter(username=form.username.data, phonnumber=form.phonenumber.data, email=form.email.data)
+        text_letter = self.render_letter(username=form.username, phonnumber=form.phonenumber, email=form.email)
         self.email_client.send(text_letter)
         self.tg_sender.send(text_letter)
     

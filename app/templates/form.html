@@ -1,7 +1,7 @@
 
 {% block form %}
         <div class="form_zone">
-            <form action="/form" method="post" id="form">
+            <form id="form">
                 <h2 class="form_title">Оставьте свою заявку</h2>
                 <h2 class="form_preface">Наш специалист свяжется с вами для консультации</h2>
                 <div class="form_name_number">
@@ -15,7 +15,7 @@
                         {{ form.email(placeholder="Email", maxlength="30") }}
                     </div>
                     <div class="submit_button">
-                        {{ form.submit(class_="submit") }}
+                        {{ form.submit(class_="submit", onClick="send_form()") }}
                     </div>
                 </div>
         </form>

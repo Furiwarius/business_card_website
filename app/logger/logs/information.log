@@ -1,0 +1,151 @@
+2024-09-15 22:44:19,433 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-15 22:44:19,434 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-15 22:44:19,436 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:44:24,613 - werkzeug - WARNING -  * Debugger is active!
+2024-09-15 22:44:24,616 - werkzeug - INFO -  * Debugger PIN: 489-051-917
+2024-09-15 22:44:24,722 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "GET /?username=sdfsdf&phonenumber=22343473473&email=vasiliy.trunov.00@mail.ru&submit=Оставить+заявку HTTP/1.1" 200 -
+2024-09-15 22:44:24,964 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,968 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,972 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,975 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,978 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,985 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,986 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:24,996 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:24] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:25,001 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:25] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:25,005 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:25] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:25,012 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:25] "[36mGET /static/img/metal_background.jpg HTTP/1.1[0m" 304 -
+2024-09-15 22:44:25,385 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:25] "[36mGET /static/img/icon_welder.png HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,265 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "GET /installation_of_metal_structures HTTP/1.1" 200 -
+2024-09-15 22:44:28,298 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,319 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,320 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,322 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,323 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,326 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,330 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,332 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,335 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:28,336 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:28] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,918 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "GET / HTTP/1.1" 200 -
+2024-09-15 22:44:29,958 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,971 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,972 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,973 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,974 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,977 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,982 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,984 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,985 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:29,986 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:29] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,035 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "GET /?username=Furiwarius&phonenumber=89062390323&email=vasiliy.trunov.00@mail.ru&submit=Оставить+заявку HTTP/1.1" 200 -
+2024-09-15 22:44:46,057 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[35m[1mPOST /form HTTP/1.1[0m" 500 -
+2024-09-15 22:44:46,089 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,105 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,105 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,105 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,106 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,106 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,107 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,116 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,117 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:44:46,119 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:44:46] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:14,837 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Vasiliy\\Desktop\\projects\\python module\\portfolio_projects\\business_card_website\\app\\routes\\schemas.py', reloading
+2024-09-15 22:45:15,140 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:45:19,820 - werkzeug - WARNING -  * Debugger is active!
+2024-09-15 22:45:19,823 - werkzeug - INFO -  * Debugger PIN: 489-051-917
+2024-09-15 22:45:21,026 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Vasiliy\\Desktop\\projects\\python module\\portfolio_projects\\business_card_website\\app\\routes\\schemas.py', reloading
+2024-09-15 22:45:21,445 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:45:29,007 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-15 22:45:29,008 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-15 22:45:29,009 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:45:33,771 - werkzeug - WARNING -  * Debugger is active!
+2024-09-15 22:45:33,775 - werkzeug - INFO -  * Debugger PIN: 489-051-917
+2024-09-15 22:45:33,883 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:33] "GET /installation_of_metal_structures HTTP/1.1" 200 -
+2024-09-15 22:45:34,150 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,155 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,158 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,162 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,163 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,164 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,167 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,169 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,177 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:34,179 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:34] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,883 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "GET / HTTP/1.1" 200 -
+2024-09-15 22:45:36,924 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,941 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,941 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,943 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,944 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,946 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,948 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,953 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,954 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:36,955 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:36] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,813 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "GET /?username=Furiwarius&phonenumber=89062390323&email=vasiliy.trunov.00@mail.ru&submit=Оставить+заявку HTTP/1.1" 200 -
+2024-09-15 22:45:50,822 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[32mPOST /form HTTP/1.1[0m" 302 -
+2024-09-15 22:45:50,855 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,875 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,876 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,890 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,891 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,892 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,892 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,896 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,899 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:50,900 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:45:50] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:45:55,722 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Vasiliy\\Desktop\\projects\\python module\\portfolio_projects\\business_card_website\\app\\routes\\schemas.py', reloading
+2024-09-15 22:45:56,030 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:46:00,806 - werkzeug - WARNING -  * Debugger is active!
+2024-09-15 22:46:00,812 - werkzeug - INFO -  * Debugger PIN: 489-051-917
+2024-09-15 22:46:53,105 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Vasiliy\\Desktop\\projects\\python module\\portfolio_projects\\business_card_website\\app\\adapters\\sending_notifications\\send_notifications.py', reloading
+2024-09-15 22:46:53,402 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:46:58,091 - werkzeug - WARNING -  * Debugger is active!
+2024-09-15 22:46:58,095 - werkzeug - INFO -  * Debugger PIN: 489-051-917
+2024-09-15 22:47:02,541 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Vasiliy\\Desktop\\projects\\python module\\portfolio_projects\\business_card_website\\app\\adapters\\sending_notifications\\send_notifications.py', reloading
+2024-09-15 22:47:02,858 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:47:10,410 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-15 22:47:10,410 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-15 22:47:10,412 - werkzeug - INFO -  * Restarting with stat
+2024-09-15 22:47:15,078 - werkzeug - WARNING -  * Debugger is active!
+2024-09-15 22:47:15,082 - werkzeug - INFO -  * Debugger PIN: 489-051-917
+2024-09-15 22:47:15,186 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "GET /installation_of_metal_structures HTTP/1.1" 200 -
+2024-09-15 22:47:15,371 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,377 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,381 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,385 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,389 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,401 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,416 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,423 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,429 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:15,438 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:15] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,874 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "GET / HTTP/1.1" 200 -
+2024-09-15 22:47:17,922 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,937 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,938 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,939 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,939 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,939 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,940 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,948 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,949 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,949 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:17,957 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:17] "[36mGET /static/img/metal_background.jpg HTTP/1.1[0m" 304 -
+2024-09-15 22:47:29,983 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:29] "[32mPOST /form HTTP/1.1[0m" 302 -
+2024-09-15 22:47:29,989 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:29] "GET /?username=Furiwarius&phonenumber=89062390323&email=vasiliy.trunov.00@mail.ru&submit=Оставить+заявку HTTP/1.1" 200 -
+2024-09-15 22:47:29,991 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:29] "GET / HTTP/1.1" 200 -
+2024-09-15 22:47:30,022 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/page_style.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,035 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/contacts.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,037 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/menu.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,037 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/form.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,054 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/button_up.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,056 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/services.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,058 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,061 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/js/btn_up.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,063 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/js/copy.js HTTP/1.1[0m" 304 -
+2024-09-15 22:47:30,063 - werkzeug - INFO - 127.0.0.1 - - [15/Sep/2024 22:47:30] "[36mGET /static/js/send_form.js HTTP/1.1[0m" 304 -
