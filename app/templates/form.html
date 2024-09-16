@@ -1,23 +1,25 @@
 
 {% block form %}
         <div class="form_zone">
-            <form id="form">
-                <h2 class="form_title">Оставьте свою заявку</h2>
-                <h2 class="form_preface">Наш специалист свяжется с вами для консультации</h2>
-                <div class="form_name_number">
-                    <div class="form">
-                        {{ form.username(placeholder="Ваше имя", maxlength="20") }}
+            <form-area>
+                <form id="form">
+                    <h2 class="form_title">Оставьте свою заявку</h2>
+                    <h2 class="form_preface">Наш специалист свяжется с вами для консультации</h2>
+                    <div class="form_name_number">
+                        <div class="form">
+                            {{ form.username(placeholder="Ваше имя", maxlength="20") }}
+                        </div>
+                        <div class="form">
+                            {{ form.phonenumber(placeholder="8 (900) 000-00-00", oninput="this.value = this.value.slice(0, 11)") }}
+                        </div>
+                        <div class="form">
+                            {{ form.email(placeholder="Email", maxlength="30") }}
+                        </div>
+                        <div class="submit_button">
+                            <input class="submit" id="submit" name="submit" onClick="send_form()" value="Оставить заявку">
+                        </div>
                     </div>
-                    <div class="form">
-                        {{ form.phonenumber(placeholder="8 (900) 000-00-00", oninput="this.value = this.value.slice(0, 11)") }}
-                    </div>
-                    <div class="form">
-                        {{ form.email(placeholder="Email", maxlength="30") }}
-                    </div>
-                    <div class="submit_button">
-                        {{ form.submit(class_="submit", onClick="send_form()") }}
-                    </div>
-                </div>
-        </form>
+                </form>
+            </form-area>
         </div>
 {% endblock %}

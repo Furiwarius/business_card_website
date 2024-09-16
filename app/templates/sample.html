@@ -12,14 +12,11 @@
 		<link rel="stylesheet" href="../static/css/services.css">
 		<link rel="stylesheet" href="../static/css/footer.css">
 		<link rel="icon" href="static\img\icon_welder.png" type="image/x-icon">
-		<script src="static\js\btn_up.js"></script>
-		<script src="static\js\copy.js"></script>
-		<script src="static\js\send_form.js"></script>
 		<meta name="viewport" content="width=600">
 		<meta http-equiv="Cache-Control" content="no-store">
     </head>
     <body>
-		<div class="page">
+		<div class="page" id="app">
 			<div class="page_framing">
 				{% block menu %}
 					{% include "menu.html" %}
@@ -36,5 +33,9 @@
 				{% endblock %}
 			</div>
 		</div>
+		<script src="static\js\btn_up.js"></script>
+		<script src="static\js\copy.js"></script>
+		<script src="static\js\send_form.js"></script>
+		<script src="https://unpkg.com/vue"></script>
     </body>
 </html>

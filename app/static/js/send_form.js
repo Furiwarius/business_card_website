@@ -15,10 +15,22 @@ async function send_form() {
                         email: email
                         })
                     });
-    if (response.ok) {
-        // Если получилось, то выводим сообщение об успешном отправлении
+                    
+    if (response.status==200) {
+        await render_message(message="Заявка успешно отправлена!")
     }
     else {
-        // Если не получилось, то выводим сообщение об ошибке
+        await render_message(message="Упс! Что-то пошло не так...")
     }
+}
+
+
+async function render_message(message) {
+    
+    const app = Vue.createApp({});
+        
+    app.component('form-area', {
+        template: `<form><h2 class="form_title">${message}</h2></form>`
+    });
+    app.mount('#app');
 }

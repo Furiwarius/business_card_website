@@ -4,11 +4,12 @@ from app.adapters.database.save_notifications import save_notifications
 import os
 from app.routes.errors import page_not_found
 from app.routes.forms import ContactForm
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, jsonify
 from smtplib import SMTPAuthenticationError
 import threading
 import app.logger.logger
 from app.routes.schemas import UserForm
+from pydantic import ValidationError
 
 
 bp = Blueprint('app', __name__, url_prefix='/', template_folder='app/templates')
@@ -58,21 +59,20 @@ def service_page(service_path:str):
 
 
 # Обработка данных формы
-@bp.route('/form', methods=['post', 'get'])
+@bp.route('/form', methods=['post'])
 def bid():
   '''
   Получение данных формы
-  '''
-  form:UserForm = UserForm(**request.json)
-  
-  if request.method == 'GET':
-    return redirect(url_for('app.home_page'))
-  
-  elif request.method == 'POST':   
-    try:
-      threading.Thread(target=sender.sending_notifications, args=(form,)).start()
+  '''   
+  try:
+    form:UserForm = UserForm(**request.json)
+  except ValidationError:
+    return jsonify({'message': 'refusal'}), 422
+    
+  try:
+    threading.Thread(target=sender.sending_notifications, args=(form,)).start()
 
-    except SMTPAuthenticationError:
-      save_notifications(form)
+  except SMTPAuthenticationError:
+    save_notifications(form)
   
-    return redirect(url_for('app.home_page'))
+  return jsonify({'message': 'success'}), 200
