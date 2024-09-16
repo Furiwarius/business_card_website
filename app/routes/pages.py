@@ -1,6 +1,5 @@
 from app.adapters.content_collector import content_collector_to_dict
 from app.adapters.sending_notifications import SendNotifications
-from app.adapters.database.save_notifications import save_notifications
 import os
 from app.routes.errors import page_not_found
 from app.routes.forms import ContactForm
@@ -72,7 +71,7 @@ def bid():
   try:
     threading.Thread(target=sender.sending_notifications, args=(form,)).start()
 
-  except SMTPAuthenticationError:
-    save_notifications(form)
+  except Exception:
+    return jsonify({'message': 'error'}), 500
   
   return jsonify({'message': 'success'}), 200
