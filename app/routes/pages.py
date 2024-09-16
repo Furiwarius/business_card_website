@@ -4,7 +4,6 @@ import os
 from app.routes.errors import page_not_found
 from app.routes.forms import ContactForm
 from flask import Blueprint, render_template, request, jsonify
-from smtplib import SMTPAuthenticationError
 import threading
 import app.logger.logger
 from app.routes.schemas import UserForm
